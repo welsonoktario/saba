@@ -1,15 +1,15 @@
-package id.saba.sabaid.ui.adapters
+package id.saba.saba.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sabaid.*
+import id.saba.saba.*
 import com.squareup.picasso.Picasso
-import id.saba.sabaid.ClassEvent
-import id.saba.sabaid.ClassNews
-import id.saba.sabaid.ClassNotifikasi
-import id.saba.sabaid.ClassTrendingForum
+import id.saba.saba.ClassEvent
+import id.saba.saba.ClassNews
+import id.saba.saba.ClassNotifikasi
+import id.saba.saba.ClassTrendingForum
 import kotlinx.android.synthetic.main.list_highlightpromosi.view.*
 import kotlinx.android.synthetic.main.list_news.view.*
 import kotlinx.android.synthetic.main.list_notifikasi.view.*

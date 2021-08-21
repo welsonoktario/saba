@@ -1,4 +1,4 @@
-package id.saba.sabaid.ui.auth
+package id.saba.saba.ui.auth
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -10,8 +10,8 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import id.saba.sabaid.MainActivity
-import com.example.sabaid.R
+import id.saba.saba.MainActivity
+import id.saba.saba.R
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.indeterminateProgressDialog
 import org.jetbrains.anko.startActivity

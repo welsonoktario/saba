@@ -3,11 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -46,14 +42,14 @@
 
             <TextView
                 android:id="@+id/txtDashboard"
-                style="@style/TextAppearance.AppCompat.Headline"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginVertical="4dp"
                 android:layout_weight="1"
                 android:text="Dashboard"
-                android:textColor="@color/indigo_500"
-                android:textStyle="bold" />
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                style="@style/TextAppearance.AppCompat.Headline" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -105,7 +101,7 @@
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/homeVP"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_below="@id/tabLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

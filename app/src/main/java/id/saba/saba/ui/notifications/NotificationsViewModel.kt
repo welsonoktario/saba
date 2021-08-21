@@ -1,4 +1,4 @@
-package id.saba.sabaid.ui.notifications
+package id.saba.saba.ui.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

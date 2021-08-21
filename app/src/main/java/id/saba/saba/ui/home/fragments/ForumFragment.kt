@@ -1,4 +1,4 @@
-package id.saba.sabaid.ui.home.fragments
+package id.saba.saba.ui.home.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.saba.sabaid.ClassTrendingForum
-import com.example.sabaid.R
-import id.saba.sabaid.ui.adapters.TrendingForumAdapter
+import id.saba.saba.ClassTrendingForum
+import id.saba.saba.R
+import id.saba.saba.ui.adapters.TrendingForumAdapter
 import kotlinx.android.synthetic.main.fragment_forum.view.*
 import splitties.toast.toast
 

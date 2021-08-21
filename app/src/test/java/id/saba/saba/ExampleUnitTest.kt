@@ -1,4 +1,4 @@
-package id.saba.sabaid
+package id.saba.saba
 
 import org.junit.Test
 

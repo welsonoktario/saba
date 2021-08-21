@@ -1,4 +1,4 @@
-package id.saba.sabaid.ui.auth
+package id.saba.saba.ui.auth
 
 import android.Manifest
 import android.app.Activity
@@ -19,8 +19,8 @@ import com.android.volley.NetworkResponse
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.Volley
-import com.example.sabaid.R
-import id.saba.sabaid.VolleyMultipartRequest
+import id.saba.saba.R
+import id.saba.saba.VolleyMultipartRequest
 import kotlinx.android.synthetic.main.activity_register.*
 import org.jetbrains.anko.indeterminateProgressDialog
 import org.json.JSONException

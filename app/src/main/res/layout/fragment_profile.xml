@@ -28,7 +28,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/grey_300"
+        android:background="@color/grey_400"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTitle" />
@@ -36,7 +36,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +47,7 @@
             android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:orientation="vertical"
-            android:paddingHorizontal="16dp" >
+            android:padding="16dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -59,55 +58,57 @@
                     android:id="@+id/imgProfilePiv"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
+                    android:background="@drawable/ic_launcher_background"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_foreground"
                     tools:src="@tools:sample/avatars" />
 
             </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/txtProfileUsername"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textAlignment="center"
                 android:text="Username"
-                style="@style/TextAppearance.MaterialComponents.Headline6"/>
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/txtProfileEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="username@example.com" />
+                android:text="username@example.com"
+                android:textAlignment="center" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/grey_200">
+                app:cardBackgroundColor="@color/grey_200"
+                app:cardCornerRadius="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="8dp"
+                    android:orientation="vertical"
                     android:paddingHorizontal="16dp"
-                    android:orientation="vertical">
+                    android:paddingVertical="8dp">
 
                     <TextView
+                        style="@style/TextAppearance.MaterialComponents.Body1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Points"
-                        style="@style/TextAppearance.MaterialComponents.Body1" />
+                        android:text="Points" />
 
                     <TextView
                         android:id="@+id/txtProfileTPoints"
+                        style="@style/TextAppearance.MaterialComponents.Headline6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="100.000"
-                        android:textStyle="bold"
                         android:textColor="@color/primary"
-                        style="@style/TextAppearance.MaterialComponents.Headline6"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -117,16 +118,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="@color/grey_200">
+                app:cardBackgroundColor="@color/grey_200"
+                app:cardCornerRadius="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
-                    android:paddingVertical="8dp"
+                    android:orientation="vertical"
                     android:paddingHorizontal="16dp"
-                    android:orientation="vertical">
-                </LinearLayout>
+                    android:paddingVertical="8dp"></LinearLayout>
 
             </androidx.cardview.widget.CardView>
 

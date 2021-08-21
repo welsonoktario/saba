@@ -1,4 +1,4 @@
-package id.saba.sabaid.ui.notifications
+package id.saba.saba.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.saba.sabaid.ClassNotifikasi
-import com.example.sabaid.R
-import id.saba.sabaid.ui.adapters.NotifikasiAdapter
+import id.saba.saba.ClassNotifikasi
+import id.saba.saba.R
+import id.saba.saba.ui.adapters.NotifikasiAdapter
 import kotlinx.android.synthetic.main.fragment_notifications.view.*
 import splitties.toast.toast
 

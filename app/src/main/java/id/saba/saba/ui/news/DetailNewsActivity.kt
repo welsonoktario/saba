@@ -1,8 +1,8 @@
-package id.saba.sabaid.ui.news
+package id.saba.saba.ui.news
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.sabaid.R
+import id.saba.saba.R
 
 class DetailNewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -13,13 +13,18 @@
         android:title="@string/title_notifikasi" />
 
     <item
-        android:id="@+id/navigation_akun"
-        android:icon="@drawable/ic_baseline_person_outline_24"
-        android:title="Akun" />
+        android:id="@+id/navigation_bottom_sheet"
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:title="" />
 
     <item
-        android:id="@+id/navigation_menu"
-        android:icon="@drawable/ic_baseline_menu_24"
-        android:title="Menu" />
+        android:id="@+id/navigation_favorites"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/title_favorites" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:title="@string/title_profile" />
 
 </menu>

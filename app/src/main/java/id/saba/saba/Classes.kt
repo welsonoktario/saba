@@ -1,4 +1,4 @@
-package id.saba.sabaid
+package id.saba.saba
 
 data class SliderModal(val title: String,val heading: String, val img: Int){
 }

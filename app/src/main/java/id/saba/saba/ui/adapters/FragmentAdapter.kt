@@ -1,4 +1,4 @@
-package id.saba.sabaid.ui.adapters
+package id.saba.saba.ui.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter

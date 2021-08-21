@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.sabaid.ui.home.HomeFragment"
+        android:name="id.saba.saba.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_akun"
-        android:name="com.example.sabaid.ui.dashboard.AkunFragment"
-        android:label="@string/title_akun"
-        tools:layout="@layout/fragment_akun" />
-
-    <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.sabaid.ui.notifications.NotificationsFragment"
+        android:name="id.saba.saba.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifikasi"
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
-        android:id="@+id/navigation_menu"
-        android:name="com.example.sabaid.NotifikasiNewsFragment"
-        android:label="fragment_notifikasi_news"
-        tools:layout="@layout/fragment_notifikasi_news" />
+        android:id="@+id/navigation_favorites"
+        android:name="id.saba.saba.ui.favorites.FavoritesFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="id.saba.saba.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

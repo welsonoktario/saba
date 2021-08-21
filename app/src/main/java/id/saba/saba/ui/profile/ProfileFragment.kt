@@ -1,4 +1,4 @@
-package id.saba.sabaid.ui.profile
+package id.saba.saba.ui.profile
 
 import android.app.Dialog
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.sabaid.R
+import id.saba.saba.R
 import kotlinx.android.synthetic.main.dialog_profile_pic.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 

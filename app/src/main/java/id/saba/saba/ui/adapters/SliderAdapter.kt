@@ -1,4 +1,4 @@
-package id.saba.sabaid.ui.adapters
+package id.saba.saba.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import com.smarteist.autoimageslider.SliderViewAdapter
 import android.widget.Toast
-import com.example.sabaid.R
-import id.saba.sabaid.SliderModal
+import id.saba.saba.R
+import id.saba.saba.SliderModal
 import kotlinx.android.synthetic.main.slider_layout.view.*
 import org.jetbrains.anko.backgroundResource
 

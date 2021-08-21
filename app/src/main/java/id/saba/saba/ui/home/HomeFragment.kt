@@ -1,19 +1,19 @@
-package id.saba.sabaid.ui.home
+package id.saba.saba.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.sabaid.*
-import id.saba.sabaid.ui.home.fragments.EventFragment
-import id.saba.sabaid.ui.home.fragments.ForumFragment
-import id.saba.sabaid.ui.home.fragments.NewsFragment
-import id.saba.sabaid.ui.adapters.FragmentAdapter
-import id.saba.sabaid.ui.adapters.SliderAdapter
+import id.saba.saba.*
+import id.saba.saba.ui.home.fragments.EventFragment
+import id.saba.saba.ui.home.fragments.ForumFragment
+import id.saba.saba.ui.home.fragments.NewsFragment
+import id.saba.saba.ui.adapters.FragmentAdapter
+import id.saba.saba.ui.adapters.SliderAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.smarteist.autoimageslider.SliderView
-import id.saba.sabaid.SliderModal
+import id.saba.saba.SliderModal
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlin.collections.ArrayList
 
