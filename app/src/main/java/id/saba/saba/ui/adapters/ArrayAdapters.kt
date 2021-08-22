@@ -68,31 +68,31 @@ class EventAdapter(private val events: List<ClassEvent>, private val listener: (
 }
 
 //===================================================================================================================================================================
-class TrendingForumHolder(view: View) : RecyclerView.ViewHolder(view){
-    private val nameData = view.textViewNamaPenggunaTrendingForum_1
-    private var tanggalData = view.textViewTanggalTrendingForum_1
-    private var deskripsiData = view.textViewDeskripsiTrendingForum_1
-
-    fun bindTrendingForum(forum: ClassTrendingForum){
-        nameData.text = forum.name
-        tanggalData.text = forum.tanggal
-        deskripsiData.text = forum.deskripsi
-    }
-}
-
-class TrendingForumAdapter(private val forums: List<ClassTrendingForum>, private val listener: (ClassTrendingForum) -> Unit) : RecyclerView.Adapter<TrendingForumHolder>() {
-
-    override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): TrendingForumHolder {
-        return TrendingForumHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.list_forum, viewGroup, false))
-    }
-
-    override fun getItemCount(): Int = forums.size
-
-    override fun onBindViewHolder(holder: TrendingForumHolder, position: Int) {
-        holder.bindTrendingForum(forums[position])
-        holder.itemView.setOnClickListener { listener(forums[position]) }
-    }
-}
+//class TrendingForumHolder(view: View) : RecyclerView.ViewHolder(view){
+//    private val nameData = view.textViewNamaPenggunaTrendingForum_1
+//    private var tanggalData = view.textViewTanggalTrendingForum_1
+//    private var deskripsiData = view.textViewDeskripsiTrendingForum_1
+//
+//    fun bindTrendingForum(forum: ClassTrendingForum){
+//        nameData.text = forum.name
+//        tanggalData.text = forum.tanggal
+//        deskripsiData.text = forum.deskripsi
+//    }
+//}
+//
+//class TrendingForumAdapter(private val forums: List<ClassTrendingForum>, private val listener: (ClassTrendingForum) -> Unit) : RecyclerView.Adapter<TrendingForumHolder>() {
+//
+//    override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): TrendingForumHolder {
+//        return TrendingForumHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.list_forum, viewGroup, false))
+//    }
+//
+//    override fun getItemCount(): Int = forums.size
+//
+//    override fun onBindViewHolder(holder: TrendingForumHolder, position: Int) {
+//        holder.bindTrendingForum(forums[position])
+//        holder.itemView.setOnClickListener { listener(forums[position]) }
+//    }
+//}
 //===================================================================================================================================================================
 class NotifikasiHolder(view: View) : RecyclerView.ViewHolder(view){
     private var tanggalData = ""

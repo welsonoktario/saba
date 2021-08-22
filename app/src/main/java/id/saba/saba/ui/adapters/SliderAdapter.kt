@@ -1,6 +1,7 @@
 package id.saba.saba.ui.adapters
 
 import android.content.Context
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,6 @@ import android.widget.Toast
 import id.saba.saba.R
 import id.saba.saba.SliderModal
 import kotlinx.android.synthetic.main.slider_layout.view.*
-import org.jetbrains.anko.backgroundResource
 
 class SliderAdapter(private val context: Context, sliderModalArrayList: ArrayList<SliderModal>) : SliderViewAdapter<SliderAdapter.SliderAdapterVH>() {
 
@@ -25,7 +25,7 @@ class SliderAdapter(private val context: Context, sliderModalArrayList: ArrayLis
 
     override fun onBindViewHolder(viewHolder: SliderAdapterVH, position: Int) {
         val sliderItem = data[position]
-        viewHolder.imgBackground.backgroundResource = sliderItem.img
+        viewHolder.imgBackground.background = context.getDrawable(sliderItem.img)
         viewHolder.itemView.setOnClickListener {
             Toast.makeText(context, "This is item in position $position", Toast.LENGTH_SHORT).show()
         }

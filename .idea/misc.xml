@@ -3,11 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_detail_news.xml" value="0.3178763440860215" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_event.xml" value="0.4274193548387097" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_forum.xml" value="0.30625" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_internship.xml" value="0.4274193548387097" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_kost.xml" value="0.4274193548387097" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_register.xml" value="0.3192204301075269" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_scholarship.xml" value="0.4274193548387097" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/bottom_sheet_category.xml" value="0.30625" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/dialog_profile_pic.xml" value="0.4280913978494624" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_event.xml" value="0.4280913978494624" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_favorites.xml" value="0.4280913978494624" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_forum.xml" value="0.4280913978494624" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_news.xml" value="0.3192204301075269" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_notifications.xml" value="0.3192204301075269" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_profile.xml" value="0.432194046306505" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/list_forum.xml" value="0.67" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/list_highlightpromosi.xml" value="0.3797043010752688" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/list_news.xml" value="0.5" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/slider_layout.xml" value="0.30625" />
@@ -45,7 +58,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

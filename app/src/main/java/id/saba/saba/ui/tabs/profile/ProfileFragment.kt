@@ -1,4 +1,4 @@
-package id.saba.saba.ui.profile
+package id.saba.saba.ui.tabs.profile
 
 import android.app.Dialog
 import android.os.Bundle

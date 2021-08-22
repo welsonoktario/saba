@@ -1,17 +1,14 @@
-package id.saba.saba.ui.home
+package id.saba.saba.ui.tabs.home
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import id.saba.saba.*
-import id.saba.saba.ui.home.fragments.EventFragment
-import id.saba.saba.ui.home.fragments.ForumFragment
-import id.saba.saba.ui.home.fragments.NewsFragment
-import id.saba.saba.ui.adapters.FragmentAdapter
 import id.saba.saba.ui.adapters.SliderAdapter
-import com.google.android.material.tabs.TabLayoutMediator
 import com.smarteist.autoimageslider.SliderView
 import id.saba.saba.SliderModal
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -21,7 +18,7 @@ class HomeFragment : Fragment() {
     private lateinit var viewPager: SliderView
     private lateinit var adapter: SliderAdapter
     private lateinit var sliderModalArrayList: ArrayList<SliderModal>
-    private lateinit var homeFragmentAdapter: FragmentAdapter
+    private lateinit var inputMethodManager: InputMethodManager
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,23 +31,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         displayEventHighlight(view)
-        displayTabLayout(view)
-    }
+        inputMethodManager = requireContext().getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
 
-    private fun displayTabLayout(v: View) {
-        val fragments = arrayListOf(NewsFragment(), ForumFragment(), EventFragment())
-        homeFragmentAdapter = FragmentAdapter(this, fragments)
-        val tabLayout = v.tabLayout
-        val homeVP = v.homeVP
-
-        homeVP.adapter = homeFragmentAdapter
-        TabLayoutMediator(tabLayout, homeVP) { tab, position ->
-            when (position) {
-                0 -> tab.text = "News"
-                1 -> tab.text = "Forum"
-                2 -> tab.text = "Event"
-            }
-        }.attach()
+        view.parentLayout.setOnClickListener {
+            view.inputSearch.clearFocus()
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+        }
     }
 
     private fun displayEventHighlight(v: View) {
@@ -75,25 +61,6 @@ class HomeFragment : Fragment() {
         viewPager.setSliderAdapter(adapter)
         viewPager.scrollTimeInSec = 3
         viewPager.isAutoCycle = true
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        viewPager.isAutoCycle = false
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        viewPager.isAutoCycle = false
-    }
-
-    override fun onStop() {
-        super.onStop()
-        viewPager.isAutoCycle = false
-    }
-
-    override fun onResume() {
-        super.onResume()
-        viewPager.isAutoCycle = true
+        adapter.notifyDataSetChanged()
     }
 }

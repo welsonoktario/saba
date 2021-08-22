@@ -9,7 +9,14 @@ import androidx.navigation.ui.setupWithNavController
 import id.saba.saba.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import id.saba.saba.ui.event.EventActivity
+import id.saba.saba.ui.forum.ForumActivity
+import id.saba.saba.ui.internship.InternshipActivity
+import id.saba.saba.ui.kost.KostActivity
+import id.saba.saba.ui.news.NewsActivity
+import id.saba.saba.ui.scholarship.ScholarshipActivity
 import kotlinx.android.synthetic.main.bottom_sheet_category.*
+import splitties.activities.start
 import splitties.toast.toast
 
 class MainActivity : AppCompatActivity() {
@@ -21,20 +28,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         supportActionBar?.hide()
-        //window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE
-        //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initCategory()
 
         val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-
-        //val appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_home, R.id.navigation_notifications, R.id.navigation_akun, R.id.notifikasiNewsFragment))
-        //setupActionBarWithNavController(navController, appBarConfiguration)Ω
 
         navView.setOnItemSelectedListener {
             when (it.itemId) {
@@ -48,47 +47,33 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
-        //hideSystemUI()
     }
 
     private fun initCategory() {
         bottomSheetDialog = BottomSheetDialog(this)
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_category)
         bottomSheetDialog.cardForum.setOnClickListener {
-            toast("Forum")
+            start<ForumActivity>()
         }
 
         bottomSheetDialog.cardKost.setOnClickListener {
-            toast("Kost")
+            start<KostActivity>()
         }
 
         bottomSheetDialog.cardNews.setOnClickListener {
-            toast("News")
+            start<NewsActivity>()
         }
 
         bottomSheetDialog.cardEvents.setOnClickListener {
-            toast("Events")
+            start<EventActivity>()
         }
 
         bottomSheetDialog.cardInternships.setOnClickListener {
-            toast("Internships")
+            start<InternshipActivity>()
         }
 
         bottomSheetDialog.cardScholarships.setOnClickListener {
-            toast("Scholarships")
+            start<ScholarshipActivity>()
         }
-    }
-
-    private fun hideSystemUI() {
-        val decorView: View = this.getWindow().getDecorView()
-        val uiOptions = decorView.systemUiVisibility
-        var newUiOptions = uiOptions
-        newUiOptions = newUiOptions or View.SYSTEM_UI_FLAG_LOW_PROFILE
-        newUiOptions = newUiOptions or View.SYSTEM_UI_FLAG_FULLSCREEN
-        newUiOptions = newUiOptions or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-        newUiOptions = newUiOptions or View.SYSTEM_UI_FLAG_IMMERSIVE
-        newUiOptions = newUiOptions or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        decorView.systemUiVisibility = newUiOptions
     }
 }

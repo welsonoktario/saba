@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Sabaid" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Sabaid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,5 +12,72 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.Sabaid.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="Theme.Sabaid.TextInput" parent="Widget.AppCompat.EditText">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="backgroundColor">@color/grey_200</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Theme.Sabaid.CardView" parent="CardView.Dark">
+        <item name="cardBackgroundColor">@color/cardview_dark_background</item>
+    </style>
+
+    <style name="Theme.Sabaid.BottomSheet">
+        <item name="background">@color/cardview_dark_background</item>
     </style>
 </resources>
