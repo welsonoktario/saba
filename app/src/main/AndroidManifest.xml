@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sabaid">
         <activity
+            android:name=".ui.forum.DetailForumActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.scholarship.ScholarshipActivity"
             android:exported="true" />
         <activity

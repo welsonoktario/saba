@@ -2,15 +2,12 @@ package id.saba.saba.ui.forum
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.saba.saba.R
-import id.saba.saba.data.adapters.ForumAdapter
+import id.saba.saba.data.adapters.forum.ForumAdapter
 import id.saba.saba.data.models.Comment
 import id.saba.saba.data.models.Forum
 import id.saba.saba.data.models.User
 import id.saba.saba.databinding.ActivityForumBinding
-import kotlin.random.Random
 
 class ForumActivity : AppCompatActivity() {
     private lateinit var binding: ActivityForumBinding
@@ -29,17 +26,28 @@ class ForumActivity : AppCompatActivity() {
     private fun initView() {
         forums = arrayListOf()
         for (i in 1..5) {
-            forums.add(Forum(
-                i,
-                "Headline $i",
-                "Deskripsi $i",
-                "2021-08-15 20:13:53",
-                User(i, "User $i", "user$i@example.com"),
-                i * (1..3).random(),
-                i * (1..3).random(),
-                i * (1..3).random(),
-                arrayListOf(Comment(i, "User $i", "Comment $i"))
-            ))
+            forums.add(
+                Forum(
+                    i,
+                    "Headline $i",
+                    "Deskripsi $i",
+                    "2021-08-15 20:13:53",
+                    User(i, "User $i", "user$i@example.com"),
+                    i * (1..3).random(),
+                    i * (1..3).random(),
+                    i * (1..3).random(),
+                    arrayListOf(
+                        Comment(
+                            i,
+                            "User $i",
+                            "2021-08-15 22:11:03",
+                            "Comment $i",
+                            i * (1..3).random(),
+                            i * (1..3).random()
+                        )
+                    )
+                )
+            )
         }
         adapter = ForumAdapter(this, forums)
         linearLayoutManager = LinearLayoutManager(this)

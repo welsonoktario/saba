@@ -1,10 +1,12 @@
 package id.saba.saba.data.models
 
-import android.text.format.DateUtils
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
+@Parcelize
 data class Forum(
     val id: Int,
     val headline: String,
@@ -15,7 +17,7 @@ data class Forum(
     val downvote: Int,
     val viewer: Int,
     val comments: ArrayList<Comment>
-) {
+) : Parcelable {
     fun userUsername() = user.username
 
     fun commentCount() = comments.size

@@ -1,11 +1,9 @@
 package id.saba.saba
 
 import android.os.Bundle
-import android.view.View
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
 import id.saba.saba.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -17,7 +15,6 @@ import id.saba.saba.ui.news.NewsActivity
 import id.saba.saba.ui.scholarship.ScholarshipActivity
 import kotlinx.android.synthetic.main.bottom_sheet_category.*
 import splitties.activities.start
-import splitties.toast.toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        initCategory()
 
         val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -47,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        initCategory()
     }
 
     private fun initCategory() {

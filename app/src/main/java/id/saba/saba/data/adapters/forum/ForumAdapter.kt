@@ -1,16 +1,21 @@
-package id.saba.saba.data.adapters
+package id.saba.saba.data.adapters.forum
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import id.saba.saba.R
 import id.saba.saba.data.models.Forum
+import id.saba.saba.ui.forum.DetailForumActivity
+import splitties.activities.start
 
-class ForumAdapter(private val context: Context, val data: ArrayList<Forum>) : RecyclerView.Adapter<ForumAdapter.ViewHolder>() {
+class ForumAdapter(private val context: Context, val data: ArrayList<Forum>) :
+    RecyclerView.Adapter<ForumAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val card: CardView = view.findViewById(R.id.cardForum)
         val headline: TextView = view.findViewById(R.id.txtForumHeadline)
         val deskripsi: TextView = view.findViewById(R.id.txtForumDeskripsi)
         val username: TextView = view.findViewById(R.id.txtForumUser)
@@ -39,6 +44,12 @@ class ForumAdapter(private val context: Context, val data: ArrayList<Forum>) : R
         holder.downvote.text = forum.downvote.toString()
         holder.viewer.text = forum.viewer.toString()
         holder.comments.text = forum.commentCount().toString()
+
+        holder.card.setOnClickListener {
+            context.start<DetailForumActivity> {
+                this.putExtra("FORUM", forum)
+            }
+        }
     }
 
     override fun getItemCount(): Int = data.size

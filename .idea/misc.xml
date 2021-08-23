@@ -35,6 +35,8 @@
         <entry key="..\:/Work/SabaID_Work/SabaID/app/src/main/res/layout/list_notifikasi.xml" value="0.543010752688172" />
         <entry key="..\:/Work/SabaID_Work/SabaID/app/src/main/res/layout/slider_layout.xml" value="0.543010752688172" />
         <entry key="app/src/main/res/drawable/ic_baseline_category_24.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/ic_baseline_reply_24.xml" value="0.18055555555555555" />
+        <entry key="app/src/main/res/layout/activity_detail_forum.xml" value="0.10055724417426545" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5620767494356659" />
         <entry key="app/src/main/res/layout/bottom_sheet_category.xml" value="0.5" />
         <entry key="app/src/main/res/layout/dialog_profile_pic.xml" value="0.3890625" />
@@ -50,6 +52,8 @@
         <entry key="app/src/main/res/layout/fragment_notifikasi_forum.xml" value="0.3890625" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22135416666666666" />
         <entry key="app/src/main/res/layout/fragment_profile_photo.xml" value="0.3890625" />
+        <entry key="app/src/main/res/layout/list_comment_forum.xml" value="0.3813131313131313" />
+        <entry key="app/src/main/res/layout/list_forum.xml" value="0.1" />
         <entry key="app/src/main/res/layout/list_news.xml" value="0.3890625" />
         <entry key="app/src/main/res/layout/list_notifikasi.xml" value="0.3890625" />
         <entry key="app/src/main/res/layout/list_trendingforum.xml" value="0.25" />
@@ -58,7 +62,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
