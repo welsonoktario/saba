@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools" >
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Sabaid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -66,7 +66,7 @@
         <item name="fontFamily">@font/montserrat_medium</item>
     </style>
 
-    <style name="Theme.Sabaid.CardView" parent="CardView.Light">
+    <style name="Theme.Sabaid.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardBackgroundColor">@color/grey_200</item>
     </style>
 

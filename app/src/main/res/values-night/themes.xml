@@ -72,7 +72,7 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="Theme.Sabaid.CardView" parent="CardView.Dark">
+    <style name="Theme.Sabaid.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardBackgroundColor">@color/cardview_dark_background</item>
     </style>
 

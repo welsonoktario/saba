@@ -1,4 +1,4 @@
-package id.saba.saba.ui.tabs.favorites
+package id.saba.saba.ui.tabs.favorite
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import id.saba.saba.R
 
-class FavoritesFragment : Fragment() {
+class FavoriteFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorites, container, false)
+        return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
 }

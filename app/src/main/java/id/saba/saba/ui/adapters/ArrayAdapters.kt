@@ -9,11 +9,10 @@ import com.squareup.picasso.Picasso
 import id.saba.saba.ClassEvent
 import id.saba.saba.ClassNews
 import id.saba.saba.ClassNotifikasi
-import id.saba.saba.ClassTrendingForum
 import kotlinx.android.synthetic.main.list_highlightpromosi.view.*
-import kotlinx.android.synthetic.main.list_news.view.*
-import kotlinx.android.synthetic.main.list_notifikasi.view.*
-import kotlinx.android.synthetic.main.list_forum.view.*
+import kotlinx.android.synthetic.main.card_news.view.*
+import kotlinx.android.synthetic.main.card_notification.view.*
+import kotlinx.android.synthetic.main.card_forum.view.*
 
 class NewsHolder(view: View) : RecyclerView.ViewHolder(view){
     private val judul = view.newsJudul
@@ -32,7 +31,7 @@ class NewsHolder(view: View) : RecyclerView.ViewHolder(view){
 class NewsAdapter(private val news: List<ClassNews>, private val listener: (ClassNews) -> Unit) : RecyclerView.Adapter<NewsHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): NewsHolder {
-        return NewsHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.list_news, viewGroup, false))
+        return NewsHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.card_news, viewGroup, false))
     }
 
     override fun getItemCount(): Int = news.size
@@ -83,7 +82,7 @@ class EventAdapter(private val events: List<ClassEvent>, private val listener: (
 //class TrendingForumAdapter(private val forums: List<ClassTrendingForum>, private val listener: (ClassTrendingForum) -> Unit) : RecyclerView.Adapter<TrendingForumHolder>() {
 //
 //    override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): TrendingForumHolder {
-//        return TrendingForumHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.list_forum, viewGroup, false))
+//        return TrendingForumHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.card_forum, viewGroup, false))
 //    }
 //
 //    override fun getItemCount(): Int = forums.size
@@ -107,7 +106,7 @@ class NotifikasiHolder(view: View) : RecyclerView.ViewHolder(view){
 class NotifikasiAdapter(private val notifikasi: List<ClassNotifikasi>, private val listener: (ClassNotifikasi) -> Unit) : RecyclerView.Adapter<NotifikasiHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): NotifikasiHolder {
-        return NotifikasiHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.list_notifikasi, viewGroup, false))
+        return NotifikasiHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.card_notification, viewGroup, false))
     }
 
     override fun getItemCount(): Int = notifikasi.size

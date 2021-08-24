@@ -1,4 +1,4 @@
-package id.saba.saba.ui.tabs.notifications.fragments
+package id.saba.saba.ui.tabs.notification.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.saba.saba.ClassTrendingForum
 import id.saba.saba.R
-import kotlinx.android.synthetic.main.fragment_forum.view.*
-import splitties.toast.toast
 
-class ForumFragment : Fragment() {
+class ForumNotificationFragment : Fragment() {
     private lateinit var forums: ArrayList<ClassTrendingForum>
 //    private lateinit var adapter: TrendingForumAdapter
     private lateinit var layoutManager: LinearLayoutManager
@@ -25,7 +23,7 @@ class ForumFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forum, container, false)
+        return inflater.inflate(R.layout.fragment_notification_forum, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

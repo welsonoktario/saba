@@ -50,26 +50,32 @@ class MainActivity : AppCompatActivity() {
         bottomSheetDialog = BottomSheetDialog(this)
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_category)
         bottomSheetDialog.cardForum.setOnClickListener {
+            bottomSheetDialog.dismiss()
             start<ForumActivity>()
         }
 
         bottomSheetDialog.cardKost.setOnClickListener {
+            bottomSheetDialog.dismiss()
             start<KostActivity>()
         }
 
         bottomSheetDialog.cardNews.setOnClickListener {
+            bottomSheetDialog.dismiss()
             start<NewsActivity>()
         }
 
         bottomSheetDialog.cardEvents.setOnClickListener {
+            bottomSheetDialog.dismiss()
             start<EventActivity>()
         }
 
         bottomSheetDialog.cardInternships.setOnClickListener {
+            bottomSheetDialog.dismiss()
             start<InternshipActivity>()
         }
 
         bottomSheetDialog.cardScholarships.setOnClickListener {
+            bottomSheetDialog.dismiss()
             start<ScholarshipActivity>()
         }
     }

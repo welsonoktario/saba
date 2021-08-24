@@ -13,15 +13,15 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="id.saba.saba.ui.tabs.notifications.NotificationsFragment"
+        android:name="id.saba.saba.ui.tabs.notification.NotificationFragment"
         android:label="@string/title_notifikasi"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notification" />
 
     <fragment
         android:id="@+id/navigation_favorites"
-        android:name="id.saba.saba.ui.tabs.favorites.FavoritesFragment"
+        android:name="id.saba.saba.ui.tabs.favorite.FavoriteFragment"
         android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorite" />
 
     <fragment
         android:id="@+id/navigation_profile"

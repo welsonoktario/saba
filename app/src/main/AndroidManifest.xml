@@ -18,25 +18,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sabaid">
         <activity
-            android:name=".ui.forum.DetailForumActivity"
+            android:name=".ui.internship.InternshipActivity"
             android:exported="true" />
         <activity
             android:name=".ui.scholarship.ScholarshipActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.internship.InternshipActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.event.EventActivity"
+            android:name=".ui.news.NewsActivity"
             android:exported="true" />
         <activity
             android:name=".ui.kost.KostActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.news.NewsActivity"
+            android:name=".ui.event.EventActivity"
             android:exported="true" />
         <activity
             android:name=".ui.forum.ForumActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.FiturActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.forum.DetailForumActivity"
             android:exported="true" />
         <activity
             android:name=".ui.auth.RegisterActivity"

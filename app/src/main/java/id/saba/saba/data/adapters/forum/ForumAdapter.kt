@@ -9,7 +9,6 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import id.saba.saba.R
 import id.saba.saba.data.models.Forum
-import id.saba.saba.ui.forum.DetailForumActivity
 import splitties.activities.start
 
 class ForumAdapter(private val context: Context, val data: ArrayList<Forum>) :
@@ -27,7 +26,7 @@ class ForumAdapter(private val context: Context, val data: ArrayList<Forum>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_forum, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_forum, parent, false)
 
         return ViewHolder(view)
     }
@@ -46,9 +45,9 @@ class ForumAdapter(private val context: Context, val data: ArrayList<Forum>) :
         holder.comments.text = forum.commentCount().toString()
 
         holder.card.setOnClickListener {
-            context.start<DetailForumActivity> {
+            /*context.start<DetailForumActivity> {
                 this.putExtra("FORUM", forum)
-            }
+            }*/
         }
     }
 

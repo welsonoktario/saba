@@ -21,7 +21,7 @@ class ForumCommentAdapter(val data: ArrayList<Comment>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.list_comment_forum, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.card_forum_comment, parent, false)
 
         return ViewHolder(view)
     }

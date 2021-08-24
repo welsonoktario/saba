@@ -1,4 +1,4 @@
-package id.saba.saba.ui.tabs.notifications.fragments
+package id.saba.saba.ui.tabs.notification.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,11 +10,11 @@ import id.saba.saba.ClassNews
 import id.saba.saba.ui.news.DetailNewsActivity
 import id.saba.saba.ui.adapters.NewsAdapter
 import id.saba.saba.R
-import kotlinx.android.synthetic.main.fragment_news.view.*
+import kotlinx.android.synthetic.main.fragment_notification_news.view.*
 import splitties.fragments.start
 import splitties.toast.toast
 
-class NewsFragment : Fragment() {
+class NewsNotificationFragment : Fragment() {
     private lateinit var adapter: NewsAdapter
     private lateinit var layoutManager: LinearLayoutManager
     private lateinit var news: ArrayList<ClassNews>
@@ -24,7 +24,7 @@ class NewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_news, container, false)
+        return inflater.inflate(R.layout.fragment_notification_news, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
