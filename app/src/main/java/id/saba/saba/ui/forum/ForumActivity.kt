@@ -3,18 +3,19 @@ package id.saba.saba.ui.forum
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.saba.saba.data.adapters.forum.ForumAdapter
+import id.saba.saba.data.adapters.ForumAdapter
 import id.saba.saba.data.models.Comment
 import id.saba.saba.data.models.Forum
 import id.saba.saba.data.models.User
 import id.saba.saba.databinding.ActivityForumBinding
+import splitties.activities.start
 import kotlin.collections.ArrayList
 
-class ForumActivity : AppCompatActivity() {
+class ForumActivity : AppCompatActivity(), ForumAdapter.OnForumClickListener {
     private lateinit var forums: ArrayList<Forum>
     private lateinit var binding: ActivityForumBinding
     private lateinit var adapter: ForumAdapter
-    private lateinit var linearLayoutManager: LinearLayoutManager
+    private lateinit var layoutManager: LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +26,7 @@ class ForumActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        binding.backButton.setOnClickListener {
+        binding.btnBack.setOnClickListener {
             finish()
         }
 
@@ -42,6 +43,8 @@ class ForumActivity : AppCompatActivity() {
                 arrayListOf()
             )
             forums.add(0, forum)
+            adapter.notifyItemInserted(0)
+            layoutManager.smoothScrollToPosition(binding.forumRV, null, 0)
         }
 
         forums = arrayListOf(
@@ -86,9 +89,13 @@ class ForumActivity : AppCompatActivity() {
                 )
             ),
         ).reversed() as ArrayList<Forum>
-        linearLayoutManager = LinearLayoutManager(this)
-        adapter = ForumAdapter(this, forums)
+        layoutManager = LinearLayoutManager(this)
+        adapter = ForumAdapter(forums, this)
         binding.forumRV.adapter = adapter
-        binding.forumRV.layoutManager = linearLayoutManager
+        binding.forumRV.layoutManager = layoutManager
+    }
+
+    override fun onItemClickListener(position: Int) {
+        start<DetailForumActivity> { this.putExtra("FORUM", forums[position]) }
     }
 }

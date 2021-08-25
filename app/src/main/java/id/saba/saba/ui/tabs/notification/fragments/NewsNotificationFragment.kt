@@ -6,50 +6,58 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.saba.saba.ClassNews
-import id.saba.saba.ui.news.DetailNewsActivity
-import id.saba.saba.ui.adapters.NewsAdapter
-import id.saba.saba.R
-import kotlinx.android.synthetic.main.fragment_notification_news.view.*
-import splitties.fragments.start
-import splitties.toast.toast
+import id.saba.saba.data.adapters.NewsAdapter
+import id.saba.saba.data.models.News
+import id.saba.saba.data.models.User
+import id.saba.saba.databinding.FragmentNotificationNewsBinding
 
-class NewsNotificationFragment : Fragment() {
+class NewsNotificationFragment : Fragment(), NewsAdapter.OnNewsClickListener {
+    private var _binding: FragmentNotificationNewsBinding? = null
     private lateinit var adapter: NewsAdapter
     private lateinit var layoutManager: LinearLayoutManager
-    private lateinit var news: ArrayList<ClassNews>
+    private lateinit var news: ArrayList<News>
+
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notification_news, container, false)
+    ): View {
+        _binding = FragmentNotificationNewsBinding.inflate(inflater, container, false)
+        return _binding!!.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        displayNews(view)
+        displayNews()
     }
 
-    private fun displayNews(root: View) {
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun displayNews() {
         news = arrayListOf(
-            ClassNews(
-                "Pengguna A",
+            News(
+                1,
+                User(1, "User 1", "user1@example.com"),
                 "Berita 1",
                 "https://picsum.photos/200/150",
                 "11-01-2001",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             ),
-            ClassNews(
-                "Pengguna B",
+            News(
+                2,
+                User(1, "User 1", "user1@example.com"),
                 "Berita 2",
                 "https://picsum.photos/200/150",
                 "11-01-2001",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             ),
-            ClassNews(
-                "Pengguna C",
+            News(
+                3,
+                User(2, "User 2", "user2@example.com"),
                 "Berita 3",
                 "https://picsum.photos/200/150",
                 "11-01-2001",
@@ -58,14 +66,13 @@ class NewsNotificationFragment : Fragment() {
         )
 
         layoutManager = LinearLayoutManager(requireContext())
-        adapter = NewsAdapter(news) { n ->
-            run {
-                toast(n.judul)
-                start<DetailNewsActivity>()
-            }
-        }
+        adapter = NewsAdapter(news, this)
 
-        root.newsRV.layoutManager = layoutManager
-        root.newsRV.adapter = adapter
+        binding.newsRV.layoutManager = layoutManager
+        binding.newsRV.adapter = adapter
+    }
+
+    override fun onItemClickListener(position: Int) {
+        //
     }
 }

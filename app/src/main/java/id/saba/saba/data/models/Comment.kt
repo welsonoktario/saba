@@ -11,8 +11,8 @@ data class Comment(
     val user: String,
     val tanggal: String,
     val comment: String,
-    val upvote: Int,
-    val downvote: Int
+    var upvote: Int,
+    var downvote: Int
 ) : Parcelable {
     fun postedTimeDiff(): String {
         val SECOND_MILLIS = 1000

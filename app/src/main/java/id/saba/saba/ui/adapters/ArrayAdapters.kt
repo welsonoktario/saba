@@ -5,44 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import id.saba.saba.*
-import com.squareup.picasso.Picasso
 import id.saba.saba.ClassEvent
-import id.saba.saba.ClassNews
 import id.saba.saba.ClassNotifikasi
-import kotlinx.android.synthetic.main.list_highlightpromosi.view.*
-import kotlinx.android.synthetic.main.card_news.view.*
 import kotlinx.android.synthetic.main.card_notification.view.*
-import kotlinx.android.synthetic.main.card_forum.view.*
 
-class NewsHolder(view: View) : RecyclerView.ViewHolder(view){
-    private val judul = view.newsJudul
-    private val username = view.newsUser
-    private val tanggal = view.newsTanggal
-    private val gambar = view.newsImg
-
-    fun bindNews(news: ClassNews){
-        this.judul.text = news.judul
-        this.username.text = news.username
-        this.tanggal.text = news.tanggal
-        Picasso.get().load(news.gambar).into(gambar)
-    }
-}
-
-class NewsAdapter(private val news: List<ClassNews>, private val listener: (ClassNews) -> Unit) : RecyclerView.Adapter<NewsHolder>() {
-
-    override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): NewsHolder {
-        return NewsHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.card_news, viewGroup, false))
-    }
-
-    override fun getItemCount(): Int = news.size
-
-    override fun onBindViewHolder(holder: NewsHolder, position: Int) {
-        holder.bindNews(news[position])
-        holder.itemView.setOnClickListener { listener(news[position]) }
-    }
-}
-
-class EventHolder(view: View) : RecyclerView.ViewHolder(view){
+/*class EventHolder(view: View) : RecyclerView.ViewHolder(view){
     private val nameData = view.textViewNamaEvent_1
     private var numberData = ""
 
@@ -64,7 +31,7 @@ class EventAdapter(private val events: List<ClassEvent>, private val listener: (
         holder.bindEvent(events[position])
         holder.itemView.setOnClickListener { listener(events[position]) }
     }
-}
+}*/
 
 //===================================================================================================================================================================
 //class TrendingForumHolder(view: View) : RecyclerView.ViewHolder(view){

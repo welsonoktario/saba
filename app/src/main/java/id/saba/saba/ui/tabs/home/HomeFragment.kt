@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import id.saba.saba.*
-import id.saba.saba.ui.adapters.SliderAdapter
+import id.saba.saba.data.adapters.SliderAdapter
 import com.smarteist.autoimageslider.SliderView
 import id.saba.saba.SliderModal
 import kotlinx.android.synthetic.main.fragment_home.view.*

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import id.saba.saba.R
-import id.saba.saba.ui.adapters.FragmentAdapter
+import id.saba.saba.data.adapters.FragmentAdapter
 import id.saba.saba.ui.tabs.notification.fragments.EventNotificationFragment
 import id.saba.saba.ui.tabs.notification.fragments.ForumNotificationFragment
 import id.saba.saba.ui.tabs.notification.fragments.NewsNotificationFragment
