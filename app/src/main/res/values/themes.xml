@@ -85,4 +85,8 @@
     <style name="Theme.Sabaid.BottomSheet">
         <item name="android:background">@color/grey_200</item>
     </style>
+
+    <style name="Theme.Sabaid.AppBar">
+        <item name="android:background">@color/white</item>
+    </style>
 </resources>

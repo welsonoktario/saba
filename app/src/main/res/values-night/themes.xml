@@ -85,4 +85,12 @@
     <style name="Theme.Sabaid.BottomSheet">
         <item name="android:background">@color/cardview_dark_background</item>
     </style>
+
+    <style name="Theme.Sabaid.AppBar">
+        <item name="android:background">@color/grey_900</item>
+    </style>
+
+    <style name="Theme.Sabaid.Background">
+        <item name="android:background">@color/black</item>
+    </style>
 </resources>

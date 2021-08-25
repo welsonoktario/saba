@@ -49,7 +49,10 @@ class NewsListFragment : Fragment(), NewsAdapter.OnNewsClickListener {
                     "Berita Populer 1",
                     "https://picsum.photos/200/150",
                     "11-01-2001",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    false
                 ),
                 News(
                     2,
@@ -57,7 +60,10 @@ class NewsListFragment : Fragment(), NewsAdapter.OnNewsClickListener {
                     "Berita Populer 2",
                     "https://picsum.photos/200/150",
                     "11-01-2001",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    false
                 ),
                 News(
                     3,
@@ -65,7 +71,10 @@ class NewsListFragment : Fragment(), NewsAdapter.OnNewsClickListener {
                     "Berita Populer 3",
                     "https://picsum.photos/200/150",
                     "11-01-2001",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    true
                 )
             )
         } else {
@@ -77,7 +86,10 @@ class NewsListFragment : Fragment(), NewsAdapter.OnNewsClickListener {
                     "Berita Terbaru 1",
                     "https://picsum.photos/200/150",
                     "11-01-2001",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    true
                 ),
                 News(
                     2,
@@ -85,7 +97,10 @@ class NewsListFragment : Fragment(), NewsAdapter.OnNewsClickListener {
                     "Berita Terbaru 2",
                     "https://picsum.photos/200/150",
                     "11-01-2001",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    false
                 ),
                 News(
                     3,
@@ -93,7 +108,10 @@ class NewsListFragment : Fragment(), NewsAdapter.OnNewsClickListener {
                     "Berita Terbaru 3",
                     "https://picsum.photos/200/150",
                     "11-01-2001",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    true
                 )
             )
         }
