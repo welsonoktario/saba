@@ -92,7 +92,6 @@
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="@color/grey_900"
                 android:orientation="vertical"
                 android:paddingHorizontal="24dp"
                 android:paddingVertical="16dp"

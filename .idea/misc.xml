@@ -40,6 +40,7 @@
         <entry key="app/src/main/res/layout/activity_detail_forum.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_detail_news.xml" value="0.333786231884058" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5620767494356659" />
+        <entry key="app/src/main/res/layout/activity_news.xml" value="0.20364583333333333" />
         <entry key="app/src/main/res/layout/bottom_sheet_category.xml" value="0.5" />
         <entry key="app/src/main/res/layout/card_event.xml" value="0.375" />
         <entry key="app/src/main/res/layout/card_forum.xml" value="0.335" />
