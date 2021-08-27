@@ -31,15 +31,14 @@ class KostActivity : AppCompatActivity(), OnMapReadyCallback, KostAdapter.OnKost
         binding = ActivityKostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        loadData()
         initView()
     }
 
     private fun loadData() {
-        kosts = arrayListOf(
-            Kost(1, "https://picsum.photos/200/300", "Kos 123", 4.32, "Kos Laki-laki", "Universitas Ciputra, Jawa Timur, Indonesia", LatLng(-7.2874004, 112.6314373), false),
-            Kost(2, "https://picsum.photos/200/300", "Kos 321", 4.76, "Kos Cewe", "Universitas Ciputra, Jawa Timur, Indonesia", LatLng(-7.2890247, 112.6327868), false)
-        )
+        kosts.add(Kost(1, "https://picsum.photos/200/300", "Kos 123", 4.32, "Kos Laki-laki", "Universitas Ciputra, Jawa Timur, Indonesia", LatLng(-7.2874004, 112.6314373), false))
+        adapter.notifyItemInserted(0)
+        kosts.add(Kost(2, "https://picsum.photos/200/300", "Kos 321", 4.76, "Kos Cewe", "Universitas Ciputra, Jawa Timur, Indonesia", LatLng(-7.2890247, 112.6327868), false))
+        adapter.notifyItemInserted(1)
     }
 
     private fun initView() {
@@ -55,10 +54,9 @@ class KostActivity : AppCompatActivity(), OnMapReadyCallback, KostAdapter.OnKost
             state = BottomSheetBehavior.STATE_COLLAPSED
         }
 
-        binding.btnBack.setOnClickListener {
-            finish()
-        }
+        binding.btnBack.setOnClickListener { finish() }
 
+        kosts = arrayListOf()
         adapter = KostAdapter(this, kosts, this)
         binding.kostRV.adapter = adapter
         binding.kostRV.layoutManager = (object : LinearLayoutManager(this, HORIZONTAL, false) {
@@ -67,6 +65,9 @@ class KostActivity : AppCompatActivity(), OnMapReadyCallback, KostAdapter.OnKost
                 return true
             }
         })
+
+        // load data setelah layout
+        loadData()
     }
 
     override fun onMapReady(map: GoogleMap) {
@@ -74,11 +75,13 @@ class KostActivity : AppCompatActivity(), OnMapReadyCallback, KostAdapter.OnKost
         map.setPadding(0, 0, 0, 128)
         val builder = LatLngBounds.Builder()
 
+        // tambah marker
         kosts.forEach {
             builder.include(it.koordinat)
             map.addMarker(MarkerOptions().position(it.koordinat).title(it.nama))
         }
 
+        // biar map langsung zoom ke area semua marker
         val bounds = builder.build()
         val width = resources.displayMetrics.widthPixels
         val height = resources.displayMetrics.heightPixels

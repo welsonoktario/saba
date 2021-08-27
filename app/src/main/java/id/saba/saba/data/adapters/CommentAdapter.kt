@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import id.saba.saba.data.models.Comment
 import id.saba.saba.databinding.CardForumCommentBinding
 
-class ForumCommentAdapter(val data: ArrayList<Comment>, private val listener: OnCommentClickListener) :
-    RecyclerView.Adapter<ForumCommentAdapter.CommetnHolder>() {
+class CommentAdapter(val data: ArrayList<Comment>, private val listener: OnCommentClickListener) :
+    RecyclerView.Adapter<CommentAdapter.CommetnHolder>() {
 
     interface OnCommentClickListener {
         fun onVoteComment(position: Int, tipe: String)

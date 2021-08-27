@@ -1,6 +1,5 @@
 package id.saba.saba.ui.news
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -8,7 +7,6 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import id.saba.saba.data.adapters.NewsListAdapter
 import id.saba.saba.databinding.ActivityNewsBinding
-import kotlinx.android.synthetic.main.activity_news.*
 
 class NewsActivity : FragmentActivity() {
     private lateinit var binding: ActivityNewsBinding

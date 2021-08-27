@@ -6,16 +6,12 @@
     app:layout_behavior="@string/bottom_sheet_behavior"
     style="@style/Theme.Sabaid.BottomSheet">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/separator"
-        android:layout_width="50dp"
-        android:layout_height="4dp"
-        android:layout_marginTop="16dp"
-        app:cardElevation="0dp"
-        app:cardBackgroundColor="@color/grey_400"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Theme.Sabaid.BottomSheetDragger" />
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="wrap_content"
@@ -31,65 +27,41 @@
         app:rowCount="2"
         app:useDefaultMargins="true">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardForum"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp">
+            style="@style/Theme.Sabaid.CardView.Feature">
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardKost"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp">
+            style="@style/Theme.Sabaid.CardView.Feature">
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardNews"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp">
+            style="@style/Theme.Sabaid.CardView.Feature">
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardEvents"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp">
+            style="@style/Theme.Sabaid.CardView.Feature">
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardInternships"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp">
+            style="@style/Theme.Sabaid.CardView.Feature">
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardScholarships"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="16dp">
+            style="@style/Theme.Sabaid.CardView.Feature">
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
     </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

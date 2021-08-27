@@ -20,11 +20,12 @@ class DetailKostActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         loadKost()
-        initView()
     }
 
     private fun loadKost() {
         kost = intent.getParcelableExtra("KOST")!!
+
+        initView()
     }
 
     private fun initView() {
@@ -48,8 +49,6 @@ class DetailKostActivity : AppCompatActivity() {
             }
         }
 
-        binding.btnBack.setOnClickListener {
-            finish()
-        }
+        binding.btnBack.setOnClickListener { finish() }
     }
 }

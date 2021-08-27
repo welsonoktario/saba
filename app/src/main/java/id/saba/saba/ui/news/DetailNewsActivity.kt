@@ -19,11 +19,11 @@ class DetailNewsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         loadData()
-        initView()
     }
 
     private fun loadData() {
         news = intent.getParcelableExtra("NEWS")!!
+        initView()
     }
 
     private fun initView() {

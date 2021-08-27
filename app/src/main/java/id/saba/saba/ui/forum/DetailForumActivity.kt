@@ -3,16 +3,16 @@ package id.saba.saba.ui.forum
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.saba.saba.data.adapters.ForumCommentAdapter
+import id.saba.saba.data.adapters.CommentAdapter
 import id.saba.saba.data.models.Comment
 import id.saba.saba.data.models.Forum
 import id.saba.saba.databinding.ActivityDetailForumBinding
 
-class DetailForumActivity : AppCompatActivity(), ForumCommentAdapter.OnCommentClickListener {
+class DetailForumActivity : AppCompatActivity(), CommentAdapter.OnCommentClickListener {
     private lateinit var binding: ActivityDetailForumBinding
     private lateinit var forum: Forum
     private lateinit var comments: ArrayList<Comment>
-    private lateinit var adapter: ForumCommentAdapter
+    private lateinit var adapter: CommentAdapter
     private lateinit var layoutManager: LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,6 @@ class DetailForumActivity : AppCompatActivity(), ForumCommentAdapter.OnCommentCl
         setContentView(binding.root)
 
         loadForum()
-        initView()
     }
 
     private fun loadForum() {
@@ -39,6 +38,8 @@ class DetailForumActivity : AppCompatActivity(), ForumCommentAdapter.OnCommentCl
         )*/
         forum = intent.getParcelableExtra("FORUM")!!
         comments = forum.comments
+
+        initView()
     }
 
     private fun initView() {
@@ -47,7 +48,7 @@ class DetailForumActivity : AppCompatActivity(), ForumCommentAdapter.OnCommentCl
         binding.txtDetailForumWaktu.text = forum.tanggal
         binding.txtDetailForumDeskripsi.text = forum.deskripsi
 
-        adapter = ForumCommentAdapter(comments, this)
+        adapter = CommentAdapter(comments, this)
         layoutManager = LinearLayoutManager(this)
         binding.forumCommentRV.adapter = adapter
         binding.forumCommentRV.layoutManager = layoutManager

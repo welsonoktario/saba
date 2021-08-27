@@ -57,16 +57,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp">
 
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/separator"
-                    android:layout_width="50dp"
-                    android:layout_height="4dp"
-                    android:layout_marginTop="16dp"
-                    app:cardBackgroundColor="@color/grey_400"
-                    app:cardElevation="0dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/Theme.Sabaid.BottomSheetDragger" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/kostRV"
