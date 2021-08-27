@@ -35,7 +35,14 @@ class EventActivity : AppCompatActivity(), EventAdapter.OnEventClickListener {
             "Music Concert",
             "Headline Music Concert 1",
             User(1, "User 1", "user1@example.com"),
-            "Deskripsi music concert 1"
+            "Deskripsi music concert 1",
+            "Universitas Ciputra, Jawa Timur, Surabaya",
+            "2021-08-24",
+            "2021-08-27",
+            12,
+            15,
+            250000,
+            350000
         ))
         adapter.notifyItemInserted(0) // pakai index dari loop
 
@@ -45,7 +52,14 @@ class EventActivity : AppCompatActivity(), EventAdapter.OnEventClickListener {
             "Music Concert",
             "Headline Music Concert 2",
             User(2, "User 2", "user2@example.com"),
-            "Deskripsi music concert 2"
+            "Deskripsi music concert 2",
+            "Universitas Surabaya, Jawa Timur, Surabaya",
+            "2021-08-20",
+            "2021-08-25",
+            15,
+            18,
+            200000,
+            250000
         ))
         adapter.notifyItemInserted(1)
 

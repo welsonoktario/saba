@@ -35,6 +35,11 @@ class DetailEventActivity : AppCompatActivity() {
         binding.txtDetailEventTitle.text = event.title
         binding.txtDetailEventHeadline.text = event.headline
         binding.txtDetailEventDeskripsi.text = event.deskripsi
+        binding.txtEventDetailTanggal.text = event.textTanggal()
+        binding.txtEventDetailWaktu.text = event.textWaktu()
+        binding.btnEventDetailEarly.text = event.textEarly()
+        binding.btnEventDetailRegular.text = event.textRegular()
+        binding.txtEventDetailLokasi.text = event.lokasi
 
         binding.btnBack.setOnClickListener { finish() }
     }
