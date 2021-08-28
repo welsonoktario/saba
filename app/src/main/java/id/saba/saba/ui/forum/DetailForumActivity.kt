@@ -53,9 +53,7 @@ class DetailForumActivity : AppCompatActivity(), CommentAdapter.OnCommentClickLi
         binding.forumCommentRV.adapter = adapter
         binding.forumCommentRV.layoutManager = layoutManager
 
-        binding.btnBack.setOnClickListener {
-            finish()
-        }
+        binding.btnBack.setOnClickListener { finish() }
     }
 
     private fun addComment(comment: Comment) {

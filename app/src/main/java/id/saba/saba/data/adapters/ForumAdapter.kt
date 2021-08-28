@@ -11,7 +11,7 @@ class ForumAdapter(val data: ArrayList<Forum>, private val listener: OnForumClic
     RecyclerView.Adapter<ForumAdapter.ForumHolder>() {
 
     interface OnForumClickListener {
-        fun onItemClickListener(position: Int)
+        fun onForumCardClickListener(position: Int)
     }
 
     inner class ForumHolder(private val binding: CardForumBinding) :
@@ -22,7 +22,7 @@ class ForumAdapter(val data: ArrayList<Forum>, private val listener: OnForumClic
         }
 
         override fun onClick(v: View?) {
-            listener.onItemClickListener(absoluteAdapterPosition)
+            listener.onForumCardClickListener(absoluteAdapterPosition)
         }
 
         fun bind(forum: Forum) {

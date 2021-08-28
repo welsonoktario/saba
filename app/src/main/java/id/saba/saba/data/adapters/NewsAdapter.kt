@@ -12,7 +12,7 @@ class NewsAdapter(private val data: ArrayList<News>, private val listener: OnNew
     RecyclerView.Adapter<NewsAdapter.NewsHolder>() {
 
     interface OnNewsClickListener {
-        fun onItemClickListener(position: Int)
+        fun onNewsCardClickListener(position: Int)
     }
 
     inner class NewsHolder(private val binding: CardNewsBinding) :
@@ -23,7 +23,7 @@ class NewsAdapter(private val data: ArrayList<News>, private val listener: OnNew
             }
 
         override fun onClick(v: View?) {
-            listener.onItemClickListener(absoluteAdapterPosition)
+            listener.onNewsCardClickListener(absoluteAdapterPosition)
         }
 
         fun bind(news: News) {

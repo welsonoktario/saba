@@ -102,7 +102,7 @@ class ForumActivity : AppCompatActivity(), ForumAdapter.OnForumClickListener {
         layoutManager.smoothScrollToPosition(binding.forumRV, null, 0)
     }
 
-    override fun onItemClickListener(position: Int) {
+    override fun onForumCardClickListener(position: Int) {
         start<DetailForumActivity> { this.putExtra("FORUM", forums[position]) }
     }
 }

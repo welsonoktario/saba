@@ -9,7 +9,7 @@ import java.util.*
 data class Event(
     val id: Int,
     val gambar: String,
-    val title: String,
+    val judul: String,
     val headline: String,
     val user: User,
     val deskripsi: String,
@@ -25,10 +25,10 @@ data class Event(
         val calendar = Calendar.getInstance()
         val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
 
-        calendar.time = sdf.parse(tanggalMulai)
-        var mulai = calendar.get(Calendar.DAY_OF_MONTH)
+        calendar.time = sdf.parse(tanggalMulai)!!
+        val mulai = calendar.get(Calendar.DAY_OF_MONTH)
 
-        calendar.time = sdf.parse(tanggalAkhir)
+        calendar.time = sdf.parse(tanggalAkhir)!!
         val akhir = calendar.get(Calendar.DAY_OF_MONTH)
         val bulan = calendar.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault())
 
@@ -36,13 +36,13 @@ data class Event(
     }
 
     fun textWaktu(): String {
-        var mulai: String = if (waktuMulai > 12) {
+        val mulai: String = if (waktuMulai > 12) {
             "${waktuMulai - 12} pm"
         } else {
             "$waktuMulai am"
         }
 
-        var akhir = if (waktuAkhir > 12) {
+        val akhir = if (waktuAkhir > 12) {
             "${waktuAkhir - 12} pm"
         } else {
             "$waktuAkhir am"

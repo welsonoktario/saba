@@ -32,7 +32,7 @@ class DetailEventActivity : AppCompatActivity() {
         }
 
         Picasso.get().load(event.gambar).into(binding.imgDetailEventGambar)
-        binding.txtDetailEventTitle.text = event.title
+        binding.txtDetailEventTitle.text = event.judul
         binding.txtDetailEventHeadline.text = event.headline
         binding.txtDetailEventDeskripsi.text = event.deskripsi
         binding.txtEventDetailTanggal.text = event.textTanggal()

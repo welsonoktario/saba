@@ -132,7 +132,7 @@ class NewsListFragment : Fragment(), NewsAdapter.OnNewsClickListener {
         loadData(tipe)
     }
 
-    override fun onItemClickListener(position: Int) {
+    override fun onNewsCardClickListener(position: Int) {
         start<DetailNewsActivity> { this.putExtra("NEWS", news[position]) }
     }
 }

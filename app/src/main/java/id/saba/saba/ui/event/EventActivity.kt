@@ -77,7 +77,7 @@ class EventActivity : AppCompatActivity(), EventAdapter.OnEventClickListener {
         binding.eventRV.addItemDecoration(DividerItemDecoration(binding.eventRV.context, layoutManager.orientation))
     }
 
-    override fun onItemClickListener(position: Int) {
+    override fun onEventCardClickListener(position: Int) {
         start<DetailEventActivity> { this.putExtra("EVENT", events[position]) }
     }
 }

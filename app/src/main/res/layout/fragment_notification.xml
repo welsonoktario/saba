@@ -39,9 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/separator"
-        app:tabIndicatorColor="@color/indigo_500"
-        app:tabRippleColor="@color/indigo_200"
-        app:tabTextColor="@color/indigo_500">
+        app:tabTextAppearance="@style/TextAppearance.Sabaid.Body2.Bold">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

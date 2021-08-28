@@ -81,7 +81,7 @@ class NewsNotificationFragment : Fragment(), NewsAdapter.OnNewsClickListener {
         binding.newsRV.adapter = adapter
     }
 
-    override fun onItemClickListener(position: Int) {
+    override fun onNewsCardClickListener(position: Int) {
         //
     }
 }

@@ -30,10 +30,12 @@ class DetailNewsActivity : AppCompatActivity() {
         binding.txtDetailNewsHeadline.text = news.judul
         binding.txtDetailNewsUser.text = news.user.username
         binding.txtDetailNewsWaktu.text = news.tanggal
-        binding.txtDetailNewsDeskripsi.text = news.berita
+        binding.txtDetailNewsDeskripsi.text = news.deskripsi
 
         if (news.bookmarked) {
             binding.imgDetailNewsBookmark.setColorFilter(ContextCompat.getColor(this, R.color.primary), PorterDuff.Mode.SRC_IN)
         }
+
+        binding.btnBack.setOnClickListener { finish() }
     }
 }

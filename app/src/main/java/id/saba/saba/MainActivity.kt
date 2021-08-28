@@ -4,16 +4,17 @@ import android.os.Bundle
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import id.saba.saba.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import id.saba.saba.databinding.BottomSheetCategoryBinding
 import id.saba.saba.ui.event.EventActivity
 import id.saba.saba.ui.forum.ForumActivity
 import id.saba.saba.ui.internship.InternshipActivity
 import id.saba.saba.ui.kost.KostActivity
 import id.saba.saba.ui.news.NewsActivity
 import id.saba.saba.ui.scholarship.ScholarshipActivity
-import kotlinx.android.synthetic.main.bottom_sheet_category.*
 import splitties.activities.start
 
 class MainActivity : AppCompatActivity() {
@@ -31,50 +32,42 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
 
-        navView.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.navigation_bottom_sheet -> {
-                    bottomSheetDialog.show()
-                    false
-                }
-                else -> {
-                    navController.navigate(it.itemId)
-                    true
-                }
-            }
-        }
+        navView.setupWithNavController(navController)
+        binding.fabMenu.setOnClickListener { bottomSheetDialog.show() }
         initCategory()
     }
 
     private fun initCategory() {
+        val bottomSheetBinding = BottomSheetCategoryBinding.inflate(layoutInflater)
         bottomSheetDialog = BottomSheetDialog(this)
-        bottomSheetDialog.setContentView(R.layout.bottom_sheet_category)
-        bottomSheetDialog.cardForum.setOnClickListener {
+        bottomSheetDialog.setContentView(bottomSheetBinding.root)
+
+        bottomSheetBinding.cardForum.setOnClickListener {
             bottomSheetDialog.dismiss()
             start<ForumActivity>()
         }
 
-        bottomSheetDialog.cardKost.setOnClickListener {
+        bottomSheetBinding.cardKost.setOnClickListener {
             bottomSheetDialog.dismiss()
             start<KostActivity>()
         }
 
-        bottomSheetDialog.cardNews.setOnClickListener {
+        bottomSheetBinding.cardNews.setOnClickListener {
             bottomSheetDialog.dismiss()
             start<NewsActivity>()
         }
 
-        bottomSheetDialog.cardEvents.setOnClickListener {
+        bottomSheetBinding.cardEvents.setOnClickListener {
             bottomSheetDialog.dismiss()
             start<EventActivity>()
         }
 
-        bottomSheetDialog.cardInternships.setOnClickListener {
+        bottomSheetBinding.cardInternships.setOnClickListener {
             bottomSheetDialog.dismiss()
             start<InternshipActivity>()
         }
 
-        bottomSheetDialog.cardScholarships.setOnClickListener {
+        bottomSheetBinding.cardScholarships.setOnClickListener {
             bottomSheetDialog.dismiss()
             start<ScholarshipActivity>()
         }

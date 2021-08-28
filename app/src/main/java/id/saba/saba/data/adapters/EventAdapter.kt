@@ -11,7 +11,7 @@ import id.saba.saba.databinding.CardEventBinding
 class EventAdapter(val data: ArrayList<Event>, val listener: OnEventClickListener) : RecyclerView.Adapter<EventAdapter.EventHolder>() {
 
     interface OnEventClickListener {
-        fun onItemClickListener(position: Int)
+        fun onEventCardClickListener(position: Int)
     }
 
     inner class EventHolder(val binding: CardEventBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
@@ -22,12 +22,12 @@ class EventAdapter(val data: ArrayList<Event>, val listener: OnEventClickListene
 
         fun bind(event: Event) {
             Picasso.get().load(event.gambar).into(binding.cardEventImg)
-            binding.cardEventTitle.text = event.title
+            binding.cardEventTitle.text = event.judul
             binding.cardEventDeskripsi.text = event.deskripsi
         }
 
         override fun onClick(v: View?) {
-            listener.onItemClickListener(absoluteAdapterPosition)
+            listener.onEventCardClickListener(absoluteAdapterPosition)
         }
     }
 
