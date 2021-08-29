@@ -62,8 +62,7 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="Action button"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_post_add_24"
-                app:tint="@color/primary" />
+                android:src="@drawable/ic_baseline_post_add_24" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 

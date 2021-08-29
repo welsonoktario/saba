@@ -4,21 +4,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import id.saba.saba.data.models.Internship
 import id.saba.saba.databinding.CardInternshipBinding
 
 class InternshipAdapter(private val data: ArrayList<Internship>, private val listener: OnInternshipClickListener) : RecyclerView.Adapter<InternshipAdapter.InternshipHolder>() {
     interface OnInternshipClickListener {
-        fun onItemClickListener(position: Int)
+        fun onCardInternshipClickListener(position: Int)
     }
 
     inner class InternshipHolder(val binding: CardInternshipBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+        init {
+            binding.cardInternship.setOnClickListener(this)
+        }
+
         override fun onClick(v: View?) {
-            TODO("Not yet implemented")
+            listener.onCardInternshipClickListener(absoluteAdapterPosition)
         }
 
         fun bind(internship: Internship) {
-
+            Picasso.get().load(internship.gambar).into(binding.cardInternshipImg)
+            binding.cardInternshipTitle.text = "${internship.company.nama} - ${internship.position}"
+            binding.cardInternshipDeskripsi.text = internship.description
         }
     }
 

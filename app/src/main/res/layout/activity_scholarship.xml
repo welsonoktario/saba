@@ -40,31 +40,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Events"
+            android:text="Scholarship"
             android:textColor="@color/primary"
             android:layout_weight="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             style="@style/TextAppearance.Sabaid.Headline6" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/actionButton"
-            android:layout_height="24dp"
-            android:layout_width="24dp"
-            android:layout_gravity="center_vertical"
-            android:focusable="true"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="0dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="Action button"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_post_add_24"
-                app:tint="@color/primary" />
-        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
     <View
@@ -78,6 +60,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBar" />
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scholarshipRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

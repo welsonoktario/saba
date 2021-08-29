@@ -45,51 +45,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputUsername_1"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/white"
-            android:hint="Email"
-            android:color="@color/white"
-            app:boxStrokeColor="@color/white"
-            app:hintTextColor="@color/white"
-            app:passwordToggleTint="@color/white"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/Theme.Sabaid.TextInput"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="Username"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                style="@style/TextAppearance.Sabaid.Caption" />
+
+            <EditText
+                android:id="@+id/txtLoginUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/white"
                 android:textColor="@color/white"
-                android:text="123"
-                android:maxLength="15" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:lines="1"
+                android:inputType="text"
+                style="@style/Theme.Sabaid.TextInput"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputPassword_1"
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Password"
-            android:textColorHint="@color/white"
-            app:passwordToggleEnabled="true"
-            app:boxStrokeColor="@color/white"
-            app:hintTextColor="@color/white"
-            app:passwordToggleTint="@color/white"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditPassword_1"
-                style="@style/Theme.Sabaid.TextInput"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="Password"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                style="@style/TextAppearance.Sabaid.Caption" />
+
+            <EditText
+                android:id="@+id/txtLoginPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:maxLength="12"
-                android:text="123"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/white"
                 android:textColor="@color/white"
-                tools:ignore="TouchTargetSizeCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:lines="1"
+                android:text="1234"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/showPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_baseline_remove_red_eye_24"
+                app:tint="@color/white" />
+
+        </FrameLayout>
 
     </LinearLayout>
 
@@ -124,4 +141,22 @@
             android:text="Registrasi"
             app:backgroundTint="#6995ED" />
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#80FFFFFF">
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:indicatorColor="@color/white"
+            app:trackColor="@color/primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

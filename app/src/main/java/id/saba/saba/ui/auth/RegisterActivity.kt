@@ -2,7 +2,6 @@ package id.saba.saba.ui.auth
 
 import android.Manifest
 import android.app.Activity
-import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -22,7 +21,6 @@ import com.android.volley.toolbox.Volley
 import id.saba.saba.R
 import id.saba.saba.VolleyMultipartRequest
 import kotlinx.android.synthetic.main.activity_register.*
-import org.jetbrains.anko.indeterminateProgressDialog
 import org.json.JSONException
 import org.json.JSONObject
 import splitties.toast.UnreliableToastApi
@@ -36,7 +34,6 @@ class RegisterActivity : AppCompatActivity() {
     var imageView: ImageView? = null
     var bitmap : Bitmap? = null
     private var handler : Handler? = null
-    private var showLoadingDialog : ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,9 +82,6 @@ class RegisterActivity : AppCompatActivity() {
                 toast("Foto tidak tersedia")
             }
             else {
-                showLoadingDialog = indeterminateProgressDialog("Please wait for a while...", "Processing data")
-                showLoadingDialog?.setCancelable(false)
-                showLoadingDialog?.show()
                 uploadBitmap(bitmap!!)
             }
         }
@@ -135,8 +129,6 @@ class RegisterActivity : AppCompatActivity() {
                 try {
                     val obj = JSONObject(String(response.data))
                     longToast("Normal: " + obj.getString("status"))
-                    handler = Handler()
-                    handler?.postDelayed({ showLoadingDialog?.dismiss() }, 0)
                 } catch (e: JSONException) {
                     longToast("Error: " + e.message.toString())
                 }

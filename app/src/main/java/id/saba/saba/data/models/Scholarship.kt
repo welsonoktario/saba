@@ -4,5 +4,5 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Scholarship(val id: Int, val user: User, val judul: String, val deskripsi: String) :
+data class Scholarship(val id: Int, val user: User, val gambar: String, val judul: String, val deskripsi: String) :
     Parcelable

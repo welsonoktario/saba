@@ -1,14 +1,17 @@
 package id.saba.saba.ui.news
 
+import android.content.res.ColorStateList
 import android.os.Bundle
-import androidx.fragment.app.FragmentActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import id.saba.saba.R
 import id.saba.saba.data.adapters.NewsListAdapter
 import id.saba.saba.databinding.ActivityNewsBinding
 
-class NewsActivity : FragmentActivity() {
+class NewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewsBinding
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
@@ -26,7 +29,7 @@ class NewsActivity : FragmentActivity() {
     private fun initView() {
         viewPager = binding.newsVP
         tabLayout = binding.tabsNews
-        adapter = NewsListAdapter(this)
+        adapter = NewsListAdapter(supportFragmentManager, lifecycle)
         viewPager.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->

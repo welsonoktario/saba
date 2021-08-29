@@ -13,6 +13,9 @@
         <entry key="..\:/Project/SabaID/app/src/main/res/drawable/icon_home.xml" value="0.3848958333333333" />
         <entry key="..\:/Project/SabaID/app/src/main/res/drawable/icon_notif.xml" value="0.3848958333333333" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_detail_event.xml" value="0.25" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_detail_forum.xml" value="0.2269021739130435" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_detail_internship.xml" value="0.25" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_detail_kost.xml" value="0.2269021739130435" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_detail_news.xml" value="0.3178763440860215" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_event.xml" value="0.33" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_forum.xml" value="0.30625" />
@@ -21,12 +24,15 @@
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_login.xml" value="0.5" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_news.xml" value="0.25" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_news2.xml" value="0.20208333333333334" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_register.xml" value="0.3192204301075269" />
-        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_scholarship.xml" value="0.4274193548387097" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/activity_scholarship.xml" value="0.22" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/bottom_sheet_category.xml" value="0.33" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/card_event.xml" value="0.5" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/card_internship.xml" value="0.67" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/card_kost.xml" value="0.23143115942028986" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/card_news.xml" value="0.33" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/card_scholarship.xml" value="0.3651041666666667" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/dialog_profile_pic.xml" value="0.4280913978494624" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_event.xml" value="0.4280913978494624" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_favorites.xml" value="0.4280913978494624" />
@@ -35,7 +41,7 @@
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_news.xml" value="0.3192204301075269" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_news_list.xml" value="0.19427083333333334" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_notifications.xml" value="0.3192204301075269" />
-        <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_profile.xml" value="0.432194046306505" />
+        <entry key="..\:/Project/SabaID/app/src/main/res/layout/fragment_profile.xml" value="0.5" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/list_forum.xml" value="0.67" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/list_highlightpromosi.xml" value="0.3797043010752688" />
         <entry key="..\:/Project/SabaID/app/src/main/res/layout/list_news.xml" value="0.5" />

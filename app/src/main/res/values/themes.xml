@@ -52,7 +52,7 @@
     </style>
 
     <style name="TextAppearance.Sabaid.Body2" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
     </style>
 
     <style name="TextAppearance.Sabaid.Body2.Bold" parent="TextAppearance.MaterialComponents.Body2">
@@ -62,11 +62,12 @@
     <style name="TextAppearance.Sabaid.Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textSize">10sp</item>
         <item name="iconTint">@color/white</item>
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="iconGravity">textStart</item>
         <item name="cornerRadius">8dp</item>
-        <item name="android:letterSpacing">0</item>
     </style>
 
     <style name="TextAppearance.Sabaid.Caption" parent="TextAppearance.MaterialComponents.Caption">
@@ -117,5 +118,9 @@
         <item name="android:layout_margin">8dp</item>
         <item name="cardCornerRadius">16dp</item>
         <item name="backgroundColor">@color/white</item>
+    </style>
+
+    <style name="Theme.Sabaid.TextInputLayout.White" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="colorOnSurface">@color/white</item>
     </style>
 </resources>
