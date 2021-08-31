@@ -53,5 +53,5 @@ data class Event(
 
     fun textEarly() = "Early Bid: Rp $hargaEarly"
 
-    fun textRegular() = "Regular: Rp $hargaRegular"
+    fun textRegular() = "Regular: Rp $hargaRegular  "
 }

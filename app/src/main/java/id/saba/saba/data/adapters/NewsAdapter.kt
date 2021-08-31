@@ -30,7 +30,7 @@ class NewsAdapter(private val data: ArrayList<News>, private val listener: OnNew
             binding.cardNewsJudul.text = news.judul
             binding.cardNewsUser.text = news.user.username
             binding.cardNewsTanggal.text = news.tanggal
-            Picasso.get().load(news.gambar).into(binding.cardNewsImg)
+            Picasso.get().load(news.thumbnail).into(binding.cardNewsImg)
         }
     }
 

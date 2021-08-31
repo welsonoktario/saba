@@ -8,12 +8,16 @@ import com.squareup.picasso.Picasso
 import id.saba.saba.data.models.Internship
 import id.saba.saba.databinding.CardInternshipBinding
 
-class InternshipAdapter(private val data: ArrayList<Internship>, private val listener: OnInternshipClickListener) : RecyclerView.Adapter<InternshipAdapter.InternshipHolder>() {
+class InternshipAdapter(
+    private val data: ArrayList<Internship>,
+    private val listener: OnInternshipClickListener
+) : RecyclerView.Adapter<InternshipAdapter.InternshipHolder>() {
     interface OnInternshipClickListener {
         fun onCardInternshipClickListener(position: Int)
     }
 
-    inner class InternshipHolder(val binding: CardInternshipBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+    inner class InternshipHolder(val binding: CardInternshipBinding) :
+        RecyclerView.ViewHolder(binding.root), View.OnClickListener {
         init {
             binding.cardInternship.setOnClickListener(this)
         }
@@ -24,18 +28,20 @@ class InternshipAdapter(private val data: ArrayList<Internship>, private val lis
 
         fun bind(internship: Internship) {
             Picasso.get().load(internship.gambar).into(binding.cardInternshipImg)
-            binding.cardInternshipTitle.text = "${internship.company.nama} - ${internship.position}"
+            binding.cardInternshipTitle.text = internship.judul
             binding.cardInternshipDeskripsi.text = internship.description
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InternshipHolder {
-        val binding = CardInternshipBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            CardInternshipBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return InternshipHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: InternshipHolder, position: Int) = holder.bind(data[position])
+    override fun onBindViewHolder(holder: InternshipHolder, position: Int) =
+        holder.bind(data[position])
 
     override fun getItemCount(): Int = data.size
 }

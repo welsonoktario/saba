@@ -23,9 +23,9 @@ class ScholarshipAdapter(private val data: ArrayList<Scholarship>, val listener:
         }
 
         fun bind(scholarship: Scholarship) {
-            Picasso.get().load(scholarship.gambar).into(binding.cardScholarshipImg)
+            Picasso.get().load(scholarship.thumbnail).into(binding.cardScholarshipImg)
             binding.cardScholarshipTitle.text = scholarship.judul
-            binding.cardScholarshipDeskripsi.text = scholarship.deskripsi
+            binding.cardScholarshipDeskripsi.text = scholarship.kutipan
         }
     }
 

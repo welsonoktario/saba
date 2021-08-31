@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@id/appBar" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/internshipRv"
+        android:id="@+id/internshipRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:paddingTop="16dp"

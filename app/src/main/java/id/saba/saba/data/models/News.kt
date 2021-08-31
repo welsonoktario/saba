@@ -8,8 +8,8 @@ data class News(
     val id: Int,
     val user: User,
     val judul: String,
-    val gambar: String,
+    val thumbnail: String,
     val tanggal: String,
-    val deskripsi: String,
+    val content: String,
     var bookmarked: Boolean = false
 ) : Parcelable

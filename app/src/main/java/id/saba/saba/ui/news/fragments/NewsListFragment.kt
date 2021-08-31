@@ -40,83 +40,96 @@ class NewsListFragment : Fragment(), NewsAdapter.OnNewsClickListener {
 
     private fun loadData(tipeNews: String) {
         if (tipeNews === "popular") {
-            news.add(News(
-                1,
-                User(1, "User 1", "user1@example.com"),
-                "Berita Populer 1",
-                "https://picsum.photos/200/150",
-                "11-01-2001",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
-                        "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
-                        "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                false
-            ))
+            news.add(
+                News(
+                    1,
+                    User(1, "User 1", "user1@example.com"),
+                    "Berita Populer 1",
+                    "https://picsum.photos/200/150",
+                    "11-01-2001",
+                    "<img src='https://picsum.photos/200/150' width='100%' />" +
+                            "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+                    false
+                )
+            )
             adapter.notifyItemInserted(0)
 
-            news.add(News(
-                2,
-                User(1, "User 1", "user1@example.com"),
-                "Berita Populer 2",
-                "https://picsum.photos/200/150",
-                "11-01-2001",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
-                        "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
-                        "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                false
-            ))
+            news.add(
+                News(
+                    2,
+                    User(1, "User 1", "user1@example.com"),
+                    "Berita Populer 2",
+                    "https://picsum.photos/200/150",
+                    "11-01-2001",
+                    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+                    false
+                )
+            )
             adapter.notifyItemInserted(1)
 
-            news.add(News(
-                3,
-                User(2, "User 2", "user2@example.com"),
-                "Berita Populer 3",
-                "https://picsum.photos/200/150",
-                "11-01-2001",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
-                        "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
-                        "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                true
-            ))
+            news.add(
+                News(
+                    3,
+                    User(2, "User 2", "user2@example.com"),
+                    "Berita Populer 3",
+                    "https://picsum.photos/200/150",
+                    "11-01-2001",
+                    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+                    true
+                )
+            )
             adapter.notifyItemInserted(2)
         } else {
             // api call berita terbaru
-            news.add(News(
-                1,
-                User(1, "User 1", "user1@example.com"),
-                "Berita Terbaru 1",
-                "https://picsum.photos/200/150",
-                "11-01-2001",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
-                        "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
-                        "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                true
-            ))
+            news.add(
+                News(
+                    1,
+                    User(1, "User 1", "user1@example.com"),
+                    "Berita Terbaru 1",
+                    "https://picsum.photos/200/150",
+                    "11-01-2001",
+                    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+                    true
+                )
+            )
             adapter.notifyItemInserted(0)
 
-            news.add(News(
-                2,
-                User(1, "User 1", "user1@example.com"),
-                "Berita Terbaru 2",
-                "https://picsum.photos/200/150",
-                "11-01-2001",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
-                        "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
-                        "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                false
-            ))
+            news.add(
+                News(
+                    2,
+                    User(1, "User 1", "user1@example.com"),
+                    "Berita Terbaru 2",
+                    "https://picsum.photos/200/150",
+                    "11-01-2001",
+                    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+                    false
+                )
+            )
             adapter.notifyItemInserted(1)
 
-            news.add(News(
-                3,
-                User(2, "User 2", "user2@example.com"),
-                "Berita Terbaru 3",
-                "https://picsum.photos/200/150",
-                "11-01-2001",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
-                        "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
-                        "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                true
-            ))
+            news.add(
+                News(
+                    3,
+                    User(2, "User 2", "user2@example.com"),
+                    "Berita Terbaru 3",
+                    "https://picsum.photos/200/150",
+                    "11-01-2001",
+                    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                            "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                            "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+                    true
+                )
+            )
             adapter.notifyItemInserted(2)
         }
         news = news.reversed() as ArrayList<News>

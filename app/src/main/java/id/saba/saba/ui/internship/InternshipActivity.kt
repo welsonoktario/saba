@@ -2,11 +2,96 @@ package id.saba.saba.ui.internship
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import id.saba.saba.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import id.saba.saba.data.adapters.InternshipAdapter
+import id.saba.saba.data.models.Company
+import id.saba.saba.data.models.Internship
+import id.saba.saba.databinding.ActivityInternshipBinding
+import splitties.activities.start
 
-class InternshipActivity : AppCompatActivity() {
+class InternshipActivity : AppCompatActivity(), InternshipAdapter.OnInternshipClickListener {
+    private lateinit var binding: ActivityInternshipBinding
+    private lateinit var internships: ArrayList<Internship>
+    private lateinit var adapter: InternshipAdapter
+    private lateinit var layoutManager: LinearLayoutManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_internship)
+
+        binding = ActivityInternshipBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        initView()
+        loadData()
+    }
+
+    private fun loadData() {
+        internships.add(
+            Internship(
+                1,
+                "https://picsum.photos/200/300",
+                "Android Developer",
+                Company(
+                    1,
+                    "PT. Jaya Abadi",
+                    "https://ui-avatars.com/api/?name=Jaya+Abadi",
+                    "Surabaya, Jawa Timur, Indonesia",
+                    "+6281234567890"
+                ),
+                "2021-08-31",
+                "Deskripsi internship"
+            )
+        )
+        adapter.notifyItemInserted(0)
+
+        internships.add(
+            Internship(
+                2,
+                "https://picsum.photos/200/300",
+                "iOS Developer",
+                Company(
+                    1,
+                    "PT. Jaya Abadi",
+                    "https://ui-avatars.com/api/?name=Jaya+Abadi",
+                    "Surabaya, Jawa Timur, Indonesia",
+                    "+6281234567890"
+                ),
+                "2021-08-30",
+                "Deskripsi internship"
+            )
+        )
+        adapter.notifyItemInserted(1)
+
+        internships.add(
+            Internship(
+                3,
+                "https://picsum.photos/200/300",
+                "Fullstack Web Developer",
+                Company(
+                    1,
+                    "PT. Jaya Abadi",
+                    "https://ui-avatars.com/api/?name=Jaya+Abadi",
+                    "Surabaya, Jawa Timur, Indonesia",
+                    "+6281234567890"
+                ),
+                "2021-08-30",
+                "Deskripsi internship"
+            )
+        )
+        adapter.notifyItemInserted(2)
+    }
+
+    private fun initView() {
+        internships = arrayListOf()
+        adapter = InternshipAdapter(internships, this)
+        layoutManager = LinearLayoutManager(this)
+        binding.internshipRV.adapter = adapter
+        binding.internshipRV.layoutManager = layoutManager
+
+        binding.btnBack.setOnClickListener { finish() }
+    }
+
+    override fun onCardInternshipClickListener(position: Int) {
+        start<DetailInternshipActivity> { this.putExtra("INTERNSHIP", internships[position]) }
     }
 }

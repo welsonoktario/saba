@@ -3,6 +3,8 @@ package id.saba.saba.ui.news
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.core.content.ContextCompat
 import id.saba.saba.R
 import id.saba.saba.data.models.News
@@ -11,6 +13,7 @@ import id.saba.saba.databinding.ActivityDetailNewsBinding
 class DetailNewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailNewsBinding
     private lateinit var news: News
+    private lateinit var webView: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,13 +30,23 @@ class DetailNewsActivity : AppCompatActivity() {
     }
 
     private fun initView() {
+        webView = binding.webViewDetailNewsContent
         binding.txtDetailNewsHeadline.text = news.judul
         binding.txtDetailNewsUser.text = news.user.username
         binding.txtDetailNewsWaktu.text = news.tanggal
-        binding.txtDetailNewsDeskripsi.text = news.deskripsi
 
         if (news.bookmarked) {
             binding.imgDetailNewsBookmark.setColorFilter(ContextCompat.getColor(this, R.color.primary), PorterDuff.Mode.SRC_IN)
+        }
+
+        webView.loadDataWithBaseURL("file:///android_asset/www/index.html", news.content, "text/html; charset=utf-8", "UTF-8", null)
+        webView.settings.javaScriptEnabled = true
+        webView.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView, url: String) {
+                if (webView.progress == 100) {
+                    view.requestLayout()
+                }
+            }
         }
 
         binding.btnBack.setOnClickListener { finish() }

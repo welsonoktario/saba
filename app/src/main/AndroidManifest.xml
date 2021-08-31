@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sabaid">
         <activity
+            android:name=".ui.scholarship.DetailScholarshipActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.internship.DetailInternshipActivity"
             android:exported="true" />
         <activity
