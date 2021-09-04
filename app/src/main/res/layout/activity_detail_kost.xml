@@ -161,7 +161,7 @@
                         android:layout_marginTop="16dp"
                         android:text="Contact Person"
                         app:icon="@drawable/ic_baseline_contact_mail_24"
-                        style="@style/TextAppearance.Sabaid.Button"/>
+                        style="@style/Theme.Sabaid.Button"/>
 
                 </LinearLayout>
 

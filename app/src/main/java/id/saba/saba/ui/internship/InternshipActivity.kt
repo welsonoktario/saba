@@ -31,6 +31,7 @@ class InternshipActivity : AppCompatActivity(), InternshipAdapter.OnInternshipCl
                 1,
                 "https://picsum.photos/200/300",
                 "Android Developer",
+                "Deskripsi internship",
                 Company(
                     1,
                     "PT. Jaya Abadi",
@@ -49,6 +50,7 @@ class InternshipActivity : AppCompatActivity(), InternshipAdapter.OnInternshipCl
                 2,
                 "https://picsum.photos/200/300",
                 "iOS Developer",
+                "Deskripsi internship",
                 Company(
                     1,
                     "PT. Jaya Abadi",
@@ -67,6 +69,7 @@ class InternshipActivity : AppCompatActivity(), InternshipAdapter.OnInternshipCl
                 3,
                 "https://picsum.photos/200/300",
                 "Fullstack Web Developer",
+                "Deskripsi internship",
                 Company(
                     1,
                     "PT. Jaya Abadi",

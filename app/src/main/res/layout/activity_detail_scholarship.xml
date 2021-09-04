@@ -193,7 +193,7 @@
                     android:layout_marginHorizontal="32dp"
                     android:text="Contact Person"
                     app:icon="@drawable/ic_contact"
-                    style="@style/TextAppearance.Sabaid.Button" />
+                    style="@style/Theme.Sabaid.Button" />
 
             </LinearLayout>
 

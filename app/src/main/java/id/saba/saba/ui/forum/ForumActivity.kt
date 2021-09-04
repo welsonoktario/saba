@@ -8,6 +8,7 @@ import id.saba.saba.data.models.Comment
 import id.saba.saba.data.models.Forum
 import id.saba.saba.data.models.User
 import id.saba.saba.databinding.ActivityForumBinding
+import id.saba.saba.ui.form.FormActivity
 import splitties.activities.start
 import kotlin.collections.ArrayList
 
@@ -81,7 +82,9 @@ class ForumActivity : AppCompatActivity(), ForumAdapter.OnForumClickListener {
         binding.forumRV.adapter = adapter
         binding.forumRV.layoutManager = layoutManager
 
-        binding.actionButton.setOnClickListener { addForum() }
+        binding.actionButton.setOnClickListener {
+            start<FormActivity> { this.putExtra("FORM", "forum") }
+        }
         binding.btnBack.setOnClickListener { finish() }
     }
 

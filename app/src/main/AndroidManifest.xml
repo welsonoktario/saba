@@ -18,6 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sabaid">
         <activity
+            android:name=".ui.form.FormActivity"
+            android:exported="true"
+            android:label="@string/title_activity_form"
+            android:theme="@style/Theme.Sabaid.NoActionBar" />
+        <activity
             android:name=".ui.scholarship.DetailScholarshipActivity"
             android:exported="true" />
         <activity
@@ -53,7 +58,9 @@
         <activity
             android:name=".ui.auth.RegisterActivity"
             android:exported="true" />
-        <activity android:name=".ui.auth.LoginActivity">
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

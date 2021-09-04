@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.22447916666666667" />
         <entry key="..\:/Project/SabaID/app/src/main/res/drawable/ic_event.xml" value="0.3848958333333333" />
         <entry key="..\:/Project/SabaID/app/src/main/res/drawable/ic_favorit.xml" value="0.3848958333333333" />
         <entry key="..\:/Project/SabaID/app/src/main/res/drawable/ic_forum.xml" value="0.3848958333333333" />
@@ -65,6 +66,7 @@
         <entry key="app/src/main/res/layout/activity_detail_internship.xml" value="0.3134057971014493" />
         <entry key="app/src/main/res/layout/activity_detail_news.xml" value="0.333786231884058" />
         <entry key="app/src/main/res/layout/activity_detail_scholarship.xml" value="0.3134057971014493" />
+        <entry key="app/src/main/res/layout/activity_form.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_internship.xml" value="0.1887031408308004" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5620767494356659" />
         <entry key="app/src/main/res/layout/activity_news.xml" value="0.1887031408308004" />

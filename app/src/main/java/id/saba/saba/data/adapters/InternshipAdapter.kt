@@ -27,9 +27,9 @@ class InternshipAdapter(
         }
 
         fun bind(internship: Internship) {
-            Picasso.get().load(internship.gambar).into(binding.cardInternshipImg)
+            Picasso.get().load(internship.thumbnail).into(binding.cardInternshipImg)
             binding.cardInternshipTitle.text = internship.judul
-            binding.cardInternshipDeskripsi.text = internship.description
+            binding.cardInternshipDeskripsi.text = internship.kutipan
         }
     }
 

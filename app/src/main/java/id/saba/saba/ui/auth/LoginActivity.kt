@@ -27,15 +27,19 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         supportActionBar?.hide()
         binding = ActivityLoginBinding.inflate(layoutInflater)
-
-        setContentView(binding.root)
-
         sharedPref = this.getSharedPreferences("USER", Context.MODE_PRIVATE)
-
-        checkUser()
+        val data = sharedPref.getString("user", "")
+        if (data != "") {
+            val user = gson.fromJson(data, User::class.java)
+            Log.d("USER", user.toString())
+            start<MainActivity>()
+        } else {
+            setContentView(binding.root)
+        }
 
         binding.buttonLogin1.setOnClickListener {
             val username = binding.txtLoginUsername.text.toString()
@@ -62,15 +66,6 @@ class LoginActivity : AppCompatActivity() {
 
         binding.buttonRegistrasi1.setOnClickListener {
             start<RegisterActivity>()
-        }
-    }
-
-    private fun checkUser() {
-        val data = sharedPref.getString("user", "")
-        if (data != "") {
-            val user = gson.fromJson(data, User::class.java)
-            Log.d("USER", user.toString())
-            start<MainActivity>()
         }
     }
 

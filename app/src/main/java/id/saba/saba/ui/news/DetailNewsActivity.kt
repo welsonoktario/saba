@@ -3,6 +3,7 @@ package id.saba.saba.ui.news
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.core.content.ContextCompat
@@ -39,8 +40,8 @@ class DetailNewsActivity : AppCompatActivity() {
             binding.imgDetailNewsBookmark.setColorFilter(ContextCompat.getColor(this, R.color.primary), PorterDuff.Mode.SRC_IN)
         }
 
-        webView.loadDataWithBaseURL("file:///android_asset/www/index.html", news.content, "text/html; charset=utf-8", "UTF-8", null)
-        webView.settings.javaScriptEnabled = true
+        webView.loadDataWithBaseURL("file:///android_asset/www", news.html(), "text/html; charset=utf-8", "UTF-8", null)
+        webView.webChromeClient = WebChromeClient()
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
                 if (webView.progress == 100) {
@@ -48,6 +49,7 @@ class DetailNewsActivity : AppCompatActivity() {
                 }
             }
         }
+        webView.settings.javaScriptEnabled = true
 
         binding.btnBack.setOnClickListener { finish() }
     }

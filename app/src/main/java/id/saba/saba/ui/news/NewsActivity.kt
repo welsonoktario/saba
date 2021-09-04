@@ -1,15 +1,14 @@
 package id.saba.saba.ui.news
 
-import android.content.res.ColorStateList
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import id.saba.saba.R
 import id.saba.saba.data.adapters.NewsListAdapter
 import id.saba.saba.databinding.ActivityNewsBinding
+import id.saba.saba.ui.form.FormActivity
+import splitties.activities.start
 
 class NewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewsBinding
@@ -40,5 +39,8 @@ class NewsActivity : AppCompatActivity() {
         }.attach()
 
         binding.btnBack.setOnClickListener { finish() }
+        binding.actionButton.setOnClickListener {
+            start<FormActivity> { this.putExtra("FORM", "news") }
+        }
     }
 }
