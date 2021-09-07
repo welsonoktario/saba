@@ -29,7 +29,7 @@ class ForumAdapter(val data: ArrayList<Forum>, private val listener: OnForumClic
             binding.txtForumHeadline.text = forum.headline
             binding.txtForumDeskripsi.text = forum.deskripsi
             binding.txtForumUser.text = forum.userUsername()
-            binding.txtForumWaktu.text = forum.postedTimeDiff()
+            binding.txtForumWaktu.text = forum.postedTimeString()
             binding.txtForumUpvote.text = forum.upvote.toString()
             binding.txtForumDownvote.text = forum.downvote.toString()
             binding.txtForumViewer.text = forum.viewer.toString()

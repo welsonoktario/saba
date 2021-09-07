@@ -78,190 +78,79 @@
             app:layout_constraintTop_toBottomOf="@id/appBar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <HorizontalScrollView
-        android:id="@+id/toolbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraintLayout">
-
-        <LinearLayout
-            android:id="@+id/tbContent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/action_undo"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_undo_24"
-                app:tint="@color/primary" />
-
-            <ImageButton
-                android:id="@+id/action_redo"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_redo_24"
-                app:tint="@color/primary" />
-
-            <ImageButton
-                android:id="@+id/action_bold"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_bold_24" />
-
-            <ImageButton
-                android:id="@+id/action_italic"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_italic_24" />
-
-            <ImageButton
-                android:id="@+id/action_underline"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_underlined_24" />
-
-            <ImageButton
-                android:id="@+id/action_subscript"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_subscript_24" />
-
-            <ImageButton
-                android:id="@+id/action_superscript"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_superscript_24" />
-
-            <ImageButton
-                android:id="@+id/action_strikethrough"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_strikethrough_s_24" />
-
-            <ImageButton
-                android:id="@+id/action_txt_color"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_color_lens_24" />
-
-            <ImageButton
-                android:id="@+id/action_align_left"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_align_left_24" />
-
-            <ImageButton
-                android:id="@+id/action_align_center"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_align_center_24" />
-
-            <ImageButton
-                android:id="@+id/action_align_right"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_align_right_24" />
-
-            <ImageButton
-                android:id="@+id/action_insert_bullets"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_list_bulleted_24" />
-
-            <ImageButton
-                android:id="@+id/action_insert_numbers"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_list_numbered_24" />
-
-            <ImageButton
-                android:id="@+id/action_blockquote"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_format_quote_24" />
-
-            <ImageButton
-                android:id="@+id/action_image"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_image_24" />
-
-            <ImageButton
-                android:id="@+id/action_video"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_baseline_videocam_24" />
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtFormJudulLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="8dp"
         android:hint="Judul"
+        app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbox">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtFormJudul"
+            style="@style/Theme.Sabaid.TextInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <jp.wasabeef.richeditor.RichEditor
-        android:id="@+id/editor"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginVertical="8dp"
+        android:layout_margin="16dp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toTopOf="@+id/btns"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFormJudulLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFormJudulLayout"
+        app:strokeColor="@color/card_stroke_color"
+        app:strokeWidth="2dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imgForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_add_image" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtFormIsi"
+                        style="@style/TextAppearance.Sabaid.Body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="top|start"
+                        android:hint="Isi forum"
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
         android:id="@+id/btns"

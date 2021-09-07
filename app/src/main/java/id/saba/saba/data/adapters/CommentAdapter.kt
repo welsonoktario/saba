@@ -16,7 +16,7 @@ class CommentAdapter(val data: ArrayList<Comment>, private val listener: OnComme
     inner class CommetnHolder(private val binding: CardForumCommentBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(comment: Comment) {
             binding.txtCommentUser.text = comment.user
-            binding.txtCommentWaktu.text = comment.postedTimeDiff()
+            binding.txtCommentWaktu.text = comment.postedTimeString()
             binding.txtCommentComment.text = comment.comment
             binding.txtCommentUpvote.text = comment.upvote.toString()
             binding.txtCommentDownvote.text = comment.downvote.toString()
