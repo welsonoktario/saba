@@ -5,7 +5,9 @@ import android.graphics.PorterDuff
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import id.saba.saba.R
@@ -16,8 +18,9 @@ class KostAdapter(val context: Context, val data: ArrayList<Kost>, val listener:
     RecyclerView.Adapter<KostAdapter.KostHolder>() {
 
     interface OnKostClickListener {
-        fun onItemClickListener(position: Int)
+        fun onItemClickListener(position: Int, img: ImageView)
         fun onBookmartClickListener(position: Int)
+        fun onLokasiClickListener(position: Int)
     }
 
     inner class KostHolder(private val binding: CardKostBinding) : RecyclerView.ViewHolder(binding.root),
@@ -27,7 +30,7 @@ class KostAdapter(val context: Context, val data: ArrayList<Kost>, val listener:
         }
 
         override fun onClick(v: View?) {
-            listener.onItemClickListener(absoluteAdapterPosition)
+            listener.onItemClickListener(absoluteAdapterPosition, binding.cardKostGambar)
         }
 
         fun bind(kost: Kost) {
@@ -38,12 +41,18 @@ class KostAdapter(val context: Context, val data: ArrayList<Kost>, val listener:
             binding.cardKostKategori.text = kost.kategori
             binding.cardKostLokasi.text = kost.lokasi
 
+            ViewCompat.setTransitionName(binding.cardKostGambar, "kost-${kost.id}")
+
             if (kost.boomarked) {
                 binding.cardKostBookmark.setColorFilter(ContextCompat.getColor(context, R.color.primary), PorterDuff.Mode.SRC_IN)
             }
 
             binding.cardKostBookmark.setOnClickListener {
                 listener.onBookmartClickListener(absoluteAdapterPosition)
+            }
+
+            binding.cardKostLokasiLayout.setOnClickListener {
+                listener.onLokasiClickListener(absoluteAdapterPosition)
             }
         }
     }

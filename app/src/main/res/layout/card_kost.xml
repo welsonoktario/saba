@@ -125,6 +125,7 @@
                 style="@style/TextAppearance.Sabaid.Caption"/>
 
             <LinearLayout
+                android:id="@+id/cardKostLokasiLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

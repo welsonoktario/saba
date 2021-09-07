@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Saba ID</string>
     <string name="title_home">Home</string>
-    <string name="title_notifikasi">Notifications</string>
-    <string name="title_favorites">Favorites</string>
+    <string name="title_notifikasi">Notification</string>
+    <string name="title_favorites">Favorite</string>
     <string name="title_profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

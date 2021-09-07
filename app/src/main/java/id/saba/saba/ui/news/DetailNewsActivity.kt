@@ -9,6 +9,7 @@ import android.webkit.WebViewClient
 import androidx.core.content.ContextCompat
 import id.saba.saba.R
 import id.saba.saba.data.models.News
+import id.saba.saba.data.models.User
 import id.saba.saba.databinding.ActivityDetailNewsBinding
 
 class DetailNewsActivity : AppCompatActivity() {
@@ -26,7 +27,22 @@ class DetailNewsActivity : AppCompatActivity() {
     }
 
     private fun loadData() {
-        news = intent.getParcelableExtra("NEWS")!!
+        val id = intent.getIntExtra("NEWS_ID", 0)
+        news = if (id != 0) {
+            News(
+                id,
+                User(2, "User 2", "user2@example.com"),
+                "Berita Terbaru 3",
+                "https://picsum.photos/200/150",
+                "11-01-2001",
+                "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+                        "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+                        "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+                true
+            )
+        } else {
+            intent.getParcelableExtra("NEWS")!!
+        }
         initView()
     }
 

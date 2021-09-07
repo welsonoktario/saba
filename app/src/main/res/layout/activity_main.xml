@@ -29,12 +29,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="24dp"
+            app:itemTextAppearanceActive="@style/Theme.Sabaid.BottomNav.Active"
+            app:itemTextAppearanceInactive="@style/Theme.Sabaid.BottomNav.Active"
             app:itemIconSize="20dp"
+            app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:menu="@menu/bottom_nav_menu"
-            style="@style/Theme.Sabaid.BottomSheet" />
+            style="@style/Theme.Sabaid.BottomNav" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -44,8 +47,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_menu"
-        app:maxImageSize="56dp"
-        app:fabCustomSize="64dp"
+        app:maxImageSize="68dp"
+        app:fabCustomSize="82dp"
         app:layout_anchor="@id/bottomAppBar"
         app:tint="@color/white"
         app:backgroundTint="@color/primary" />

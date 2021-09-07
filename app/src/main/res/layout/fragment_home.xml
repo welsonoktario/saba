@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/parentLayout"
@@ -71,139 +72,38 @@
                     style="@style/Theme.Sabaid.TextInput"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginHorizontal="16dp"
-                android:text="Latest News"
-                android:textSize="16sp"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                style="@style/TextAppearance.Sabaid.Caption" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/homeNewsRV"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="8dp"
-                android:paddingHorizontal="16dp"
-                android:clipToPadding="false"
-                android:scrollbars="none" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginHorizontal="16dp"
-                android:text="Trending Forums"
-                android:textSize="16sp"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                style="@style/TextAppearance.Sabaid.Caption" />
+                app:tabTextAppearance="@style/TextAppearance.Sabaid.Body2.Bold">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/homeTrendingForumRV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="8dp"
-                android:clipToPadding="false"
-                android:scrollbars="none" />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="News" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginHorizontal="16dp"
-                android:text="Upcoming Events"
-                android:textSize="16sp"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                style="@style/TextAppearance.Sabaid.Caption" />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forum" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/homeEventRV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="8dp"
-                android:clipToPadding="false"
-                android:scrollbars="none" />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event" />
+
+            </com.google.android.material.tabs.TabLayout>
         </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/homeVP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTitle" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>
-
-    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content">-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/textView3"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginStart="15dp"-->
-    <!--            android:layout_marginTop="15dp"-->
-    <!--            android:text="What's New"-->
-    <!--            android:textColor="#637AFF"-->
-    <!--            android:textSize="20sp"-->
-    <!--            android:textStyle="bold"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toBottomOf="@+id/cardViewPengguna_1" />-->
-
-    <!--        <androidx.cardview.widget.CardView-->
-    <!--            android:id="@+id/cardViewPengguna_1"-->
-    <!--            android:layout_width="50dp"-->
-    <!--            android:layout_height="50dp"-->
-    <!--            android:layout_marginTop="30dp"-->
-    <!--            android:layout_marginEnd="30dp"-->
-    <!--            app:cardCornerRadius="80dp"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintTop_toBottomOf="@id/idViewPager">-->
-
-    <!--            <ImageView-->
-    <!--                android:id="@+id/imageViewUserNotifikasi_1"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="match_parent"-->
-    <!--                android:background="#637AFF"-->
-    <!--                android:elevation="12dp"-->
-    <!--                android:scaleType="fitCenter"-->
-    <!--                app:srcCompat="@drawable/ic_baseline_person_outline_24" />-->
-    <!--        </androidx.cardview.widget.CardView>-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/textView5"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginStart="15dp"-->
-    <!--            android:layout_marginTop="15dp"-->
-    <!--            android:text="Trending Forums"-->
-    <!--            android:textColor="#637AFF"-->
-    <!--            android:textSize="20sp"-->
-    <!--            android:textStyle="bold"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toBottomOf="@+id/recyclerViewNews_1" />-->
-
-    <!--        <androidx.recyclerview.widget.RecyclerView-->
-    <!--            android:id="@+id/recyclerViewTrendingForum_1"-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginVertical="8dp"-->
-    <!--            android:paddingHorizontal="8dp"-->
-    <!--            android:scrollbars="none"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintHorizontal_bias="0.0"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toBottomOf="@+id/textView5" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/textView10"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginStart="16dp"-->
-    <!--            android:layout_marginTop="40dp"-->
-    <!--            android:text="Dashboard"-->
-    <!--            android:textColor="#637AFF"-->
-    <!--            android:textSize="24sp"-->
-    <!--            android:textStyle="bold"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toBottomOf="@id/idViewPager" />-->

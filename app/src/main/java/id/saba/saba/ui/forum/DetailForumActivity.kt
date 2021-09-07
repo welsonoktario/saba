@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import id.saba.saba.data.adapters.CommentAdapter
 import id.saba.saba.data.models.Comment
 import id.saba.saba.data.models.Forum
+import id.saba.saba.data.models.User
 import id.saba.saba.databinding.ActivityDetailForumBinding
 
 class DetailForumActivity : AppCompatActivity(), CommentAdapter.OnCommentClickListener {
@@ -24,19 +25,23 @@ class DetailForumActivity : AppCompatActivity(), CommentAdapter.OnCommentClickLi
     }
 
     private fun loadForum() {
-        // api call
-        /*forum = Forum(
-            id,
-            "Headline Forum 3",
-            "Deskripsi forum 3",
-            "2021-08-17 23:21:06",
-            User(1, "User 1", "user1@example.com"),
-            234,
-            23,
-            2345,
-            arrayListOf()
-        )*/
-        forum = intent.getParcelableExtra("FORUM")!!
+        // api call berdasarkan id kalau yang dikirim FORUM_ID (dari tab home)
+        val id = intent.getIntExtra("FORUM_ID", 0)
+        forum = if (id != 0) {
+            Forum(
+                id,
+                "Headline Forum 3",
+                "Deskripsi forum 3",
+                "2021-08-17 23:21:06",
+                User(1, "User 1", "user1@example.com"),
+                234,
+                23,
+                2345,
+                arrayListOf()
+            )
+        } else {
+            intent.getParcelableExtra("FORUM")!!
+        }
         comments = forum.comments
 
         initView()
