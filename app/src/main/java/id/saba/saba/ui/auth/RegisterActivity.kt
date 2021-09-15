@@ -33,7 +33,6 @@ class RegisterActivity : AppCompatActivity() {
 
     var imageView: ImageView? = null
     var bitmap : Bitmap? = null
-    private var handler : Handler? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

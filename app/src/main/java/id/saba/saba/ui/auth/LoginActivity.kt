@@ -3,16 +3,12 @@ package id.saba.saba.ui.auth
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.ColorStateList
-import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.view.Window
 import androidx.core.content.ContextCompat
-import com.android.volley.Response
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import id.saba.saba.MainActivity
 import id.saba.saba.R
@@ -31,14 +27,17 @@ class LoginActivity : AppCompatActivity() {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         supportActionBar?.hide()
         binding = ActivityLoginBinding.inflate(layoutInflater)
-        sharedPref = this.getSharedPreferences("USER", Context.MODE_PRIVATE)
-        val data = sharedPref.getString("user", "")
-        if (data != "") {
-            val user = gson.fromJson(data, User::class.java)
-            Log.d("USER", user.toString())
-            start<MainActivity>()
-        } else {
-            setContentView(binding.root)
+        setContentView(binding.root)
+
+        sharedPref = getSharedPreferences("SABA", Context.MODE_PRIVATE)
+
+        binding.showPassword.setOnClickListener {
+            if (binding.txtLoginPassword.transformationMethod == null) {
+                binding.txtLoginPassword.transformationMethod = PasswordTransformationMethod()
+            } else {
+                binding.txtLoginPassword.transformationMethod = null
+            }
+            binding.txtLoginPassword.setSelection(binding.txtLoginPassword.length())
         }
 
         binding.buttonLogin1.setOnClickListener {
@@ -64,9 +63,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        binding.buttonRegistrasi1.setOnClickListener {
-            start<RegisterActivity>()
-        }
+        binding.buttonRegistrasi1.setOnClickListener { start<RegisterActivity>() }
     }
 
     private fun login(username: String, password: String) {
@@ -79,6 +76,7 @@ class LoginActivity : AppCompatActivity() {
         editor.apply()
 
         binding.loadingLayout.visibility = View.GONE
+        finish()
         start<MainActivity>()
 
         /*val queue = Volley.newRequestQueue(this)
@@ -116,6 +114,4 @@ class LoginActivity : AppCompatActivity() {
             }
         queue.add(stringRequest)*/
     }
-
-
 }

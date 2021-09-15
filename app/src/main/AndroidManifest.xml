@@ -18,6 +18,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sabaid">
         <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.form.FormActivity"
             android:exported="true"
             android:label="@string/title_activity_form"
@@ -58,15 +68,7 @@
         <activity
             android:name=".ui.auth.RegisterActivity"
             android:exported="true" />
-        <activity
-            android:name=".ui.auth.LoginActivity"
-            android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ui.auth.LoginActivity" />
         <activity android:name=".ui.news.DetailNewsActivity" />
         <activity
             android:name=".MainActivity"

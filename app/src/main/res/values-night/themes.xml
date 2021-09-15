@@ -15,6 +15,10 @@
         <item name="fontFamily">@font/montserrat_regular</item>
     </style>
 
+    <style name="TextAppearance.Sabaid.Headline2.Bold" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
     <style name="TextAppearance.Sabaid.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
         <item name="fontFamily">@font/montserrat_medium</item>
     </style>
