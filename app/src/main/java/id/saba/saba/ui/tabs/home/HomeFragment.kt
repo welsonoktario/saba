@@ -2,6 +2,7 @@ package id.saba.saba.ui.tabs.home
 
 import android.app.Activity
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +17,7 @@ import id.saba.saba.SliderModal
 import id.saba.saba.data.adapters.HomeTabAdapter
 import id.saba.saba.data.adapters.SliderAdapter
 import id.saba.saba.databinding.FragmentHomeBinding
-import org.json.JSONArray
+import splitties.systemservices.windowManager
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -35,6 +36,12 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        val metrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(metrics)
+
+        _binding!!.layoutContent.layoutParams.height = metrics.heightPixels - 230
+
         return _binding!!.root
     }
 
@@ -61,7 +68,7 @@ class HomeFragment : Fragment() {
     private fun initViews() {
         viewPagerTab = binding.homeVP
         tabLayout = binding.tabHome
-        adapterTabHome = HomeTabAdapter(parentFragmentManager, lifecycle)
+        adapterTabHome = HomeTabAdapter(childFragmentManager, lifecycle)
         viewPagerTab.adapter = adapterTabHome
 
         TabLayoutMediator(tabLayout, viewPagerTab) { tab, position ->

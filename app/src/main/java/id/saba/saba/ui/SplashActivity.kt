@@ -21,12 +21,14 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivitySplashBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         sharedPref = this.getSharedPreferences("SABA", Context.MODE_PRIVATE)
 
         when (sharedPref.getString("user", "")) {
-            "" -> binding.btnGetStarted.setOnClickListener { start<LoginActivity>() }
+            "" -> {
+                setContentView(binding.root)
+                binding.btnGetStarted.setOnClickListener { start<LoginActivity>() }
+            }
             else -> start<MainActivity>()
         }
     }

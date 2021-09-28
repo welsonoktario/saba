@@ -72,4 +72,8 @@ class MainActivity : AppCompatActivity() {
             start<ScholarshipActivity>()
         }
     }
+
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
 }

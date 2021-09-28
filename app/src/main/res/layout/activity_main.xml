@@ -47,8 +47,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_menu"
-        app:maxImageSize="56dp"
-        app:fabCustomSize="76dp"
+        app:maxImageSize="58dp"
+        app:fabCustomSize="64dp"
         app:layout_anchor="@id/bottomAppBar"
         app:tint="@color/white"
         app:backgroundTint="@color/primary" />
